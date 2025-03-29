@@ -16,8 +16,8 @@ header {
 }
 
 .wide-logo-img {
-    width: 100%;
-    max-width: 1200px;
+    width: 50%;
+    max-width: 100px;
     height: auto;
     margin: 10px auto;
 }
