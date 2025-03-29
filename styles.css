@@ -64,6 +64,17 @@ section {
     border-radius: 10px;
 }
 
+/* About Us (outside container) */
+section.outside-container {
+    width: 100%; /* Full page width */
+    padding: 20px;
+    margin: 20px 0; /* Space above and below */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center; /* Center-align content */
+}
+
 /* Footer Styles */
 footer {
     background-color: #00408f;
