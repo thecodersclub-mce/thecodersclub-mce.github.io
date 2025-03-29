@@ -20,10 +20,6 @@ header {
     justify-content: flex-start; /* Align content to the left */
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
 
 /* Favicon Logo Styling */
 .favicon-logo {
