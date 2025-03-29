@@ -52,15 +52,30 @@ header {
 .secondary-menu a:hover {
     background-color: #00408f;
 }
-
 /* Menu Toggle Button */
 .menu-toggle {
-    background: none;
-    border: none;
-    color: white;
+    background-color: #0056b3; /* Add a background color */
+    border: 2px solid #007BFF; /* Add a border for a button-like effect */
+    border-radius: 5px; /* Rounded edges for button feel */
+    color: white; /* Text color */
     font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
+    padding: 10px 15px; /* Add padding for better dimensions */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect for Toggle Button */
+.menu-toggle:hover {
+    background-color: #00408f; /* Darker background on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    border-color: #003a70; /* Change border color on hover */
+}
+
+/* Active State for Button */
+.menu-toggle:active {
+    background-color: #003a70; /* Even darker background when active */
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+    border-color: #002654; /* Further border color adjustment */
 }
 
 /* Favicon Logo Styling */
