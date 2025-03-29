@@ -25,9 +25,10 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between toggle, logo, and text */
+    gap: 10px; /* Space between elements */
 }
 
+/* Menu Toggle Button */
 .menu-toggle {
     background: none;
     border: none;
@@ -36,23 +37,27 @@ header {
     cursor: pointer;
 }
 
+/* Favicon Logo Styling */
 .favicon-logo {
     width: 40px;
     height: auto;
     object-fit: contain;
+    margin: 0;
 }
 
+/* Site Title Styling */
 .site-title {
     font-size: 20px;
+    margin: 0;
     color: white;
-    white-space: nowrap; /* Prevents text wrapping */
+    white-space: nowrap; /* Prevent text wrapping */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation Menu */
 .menu-bar {
-    display: none;
-    flex-direction: column;
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
     background-color: #0056b3;
@@ -66,7 +71,7 @@ header {
 }
 
 .menu-bar.show {
-    display: flex;
+    display: flex; /* Show menu when toggled */
 }
 
 .menu-bar a {
@@ -81,9 +86,33 @@ header {
 
 .menu-bar a:hover {
     background-color: #00408f;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show toggle button on smaller screens */
+    }
+
+    .menu-bar {
+        display: none; /* Hidden by default for mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-bar {
+        display: flex; /* Always show menu for larger screens */
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .header-container {
+        flex-wrap: nowrap; /* Prevent wrapping in larger screens */
+    }
+}
 
 /* Section Styling */
 section {
