@@ -2,12 +2,12 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensure full viewport height */
+    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     display: flex;
-    flex-direction: column; /* Make the layout flexible */
+    flex-direction: column;
 }
 
 /* Header Styles */
@@ -15,6 +15,9 @@ header {
     background-color: #007BFF;
     color: white;
     padding: 10px 20px;
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    justify-content: flex-start; /* Align content to the left */
 }
 
 .logo-container {
@@ -22,15 +25,16 @@ header {
     align-items: center;
 }
 
-.wide-logo-img {
-    width: clamp(80px, 10%, 120px); /* Dynamic resizing of logo */
-    height: auto;
-    margin-right: 15px; /* Space between logo and text */
+/* Favicon Logo Styling */
+.favicon-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin-right: 15px; /* Space between logo and title */
 }
 
 .logo-container h1 {
     font-size: 24px;
-    margin: 0; /* Remove unwanted margins */
+    margin: 0;
 }
 
 /* Navigation Menu */
@@ -57,7 +61,7 @@ header {
 
 /* Section Styles */
 section {
-    flex: 1; /* Automatically fills remaining space between header and footer */
+    flex: 1;
     padding: 20px;
     max-width: 1200px;
     margin: auto;
@@ -76,13 +80,13 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) { /* Tablet and small screens */
-    .logo-container {
-        flex-direction: column; /* Stack logo and text */
-        text-align: center; /* Center align on smaller screens */
+    header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .wide-logo-img {
-        margin: 0 auto 10px auto; /* Center logo */
+    .favicon-logo {
+        margin-bottom: 10px; /* Adjust spacing for smaller screens */
     }
 
     .logo-container h1 {
@@ -90,7 +94,7 @@ footer {
     }
 
     .menu-bar {
-        flex-direction: column; /* Stack menu items */
+        flex-direction: column;
     }
 
     .menu-bar a {
@@ -101,8 +105,9 @@ footer {
 }
 
 @media (max-width: 480px) { /* Mobile phones */
-    .wide-logo-img {
-        max-width: 90%; /* Ensure logo fits smaller screen widths */
+    .favicon-logo {
+        width: 30px; /* Smaller logo for mobile */
+        height: 30px;
     }
 
     .menu-bar a {
@@ -112,6 +117,6 @@ footer {
 
     section {
         padding: 10px;
-        box-shadow: none; /* Simplify layout for mobile */
+        box-shadow: none;
     }
 }
