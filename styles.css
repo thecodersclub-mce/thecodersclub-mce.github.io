@@ -92,7 +92,7 @@ header {
 
 /* Section Styling */
 section {
-    margin-top: 200px; /* Push content below header */
+    margin-top: 250px; /* Push content further below the header */
     padding: 30px;
     max-width: 1200px;
     margin: auto;
@@ -101,8 +101,9 @@ section {
     border-radius: 10px;
     border: 1px solid #ccc;
     line-height: 1.6;
-    font-family: inherit; /* Apply Apple's font for section text */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; /* Apple's font */
 }
+
 
 /* Footer Styles */
 footer {
