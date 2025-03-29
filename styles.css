@@ -74,12 +74,23 @@ html, body {
     background-color: #003a70; /* Darker hover effect */
 }
 
-/* Footer Styles */
-footer {
-    background-color: #00408f;
-    color: white;
-    text-align: center;
+/* Score Section */
+.score {
+    background-color: #f4f4f4;
     padding: 20px;
-    font-size: 14px;
-    border-top: 3px solid #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px; /* Spacing below menu */
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .secondary-menu {
+        flex-wrap: wrap; /* Wrap menu items */
+    }
+    .score {
+        margin-top: 0; /* Remove extra spacing */
+        position: relative; /* Position score below menu */
+    }
 }
