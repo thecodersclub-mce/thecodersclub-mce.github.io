@@ -19,6 +19,7 @@ header {
     padding: 15px 20px;
     display: flex; /* Enable Flexbox */
     align-items: center; /* Align logo and text vertically */
+    justify-content: space-between; /* Distribute space between elements */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for aesthetic */
     z-index: 999; /* Ensure header stays on top of other elements */
 }
@@ -40,6 +41,32 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text depth */
 }
 
+/* Navigation Menu */
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    background-color: #0056b3;
+    padding: 12px 0;
+    border-top: 2px solid #007BFF; /* Border to separate from header */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    overflow: hidden; /* Prevent menu items from spilling */
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.menu-bar a:hover {
+    background-color: #00408f;
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
 /* Main Content Section */
 section {
     margin-top: 80px; /* Push content below the fixed header */
@@ -50,6 +77,8 @@ section {
     background: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     border-radius: 10px;
+    border: 1px solid #ccc; /* Soft border around the section */
+    line-height: 1.6;
 }
 
 /* Footer Styles */
@@ -60,4 +89,40 @@ footer {
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3; /* Border at the top for style */
+}
+
+/* Responsive Design for Navigation Menu */
+@media (max-width: 768px) {
+    .menu-bar {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center-align menu items */
+    }
+
+    .menu-bar a {
+        margin: 5px 0; /* Add space between menu items */
+        font-size: 16px; /* Adjust font size */
+        padding: 8px 12px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .favicon-logo {
+        width: 40px; /* Smaller logo width */
+        height: auto;
+    }
+
+    .menu-bar a {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 10px; /* Adjust padding */
+    }
+
+    section {
+        padding: 15px;
+        box-shadow: none; /* Simplify layout for mobile */
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
 }
