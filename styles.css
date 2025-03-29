@@ -23,11 +23,12 @@ header {
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 50px; /* Small and precise logo size */
-    height: 25; /* Maintain aspect ratio */
+    width: 50px; /* Set precise logo width */
+    height: 25px; /* Ensure proportional height with correct unit */
     margin-right: 10px; /* Space between logo and text */
-    border-radius: 0; /* Prevent any rounding */
+    border-radius: 0; /* Maintain original shape (no rounding) */
 }
+
 
 .logo-container h1 {
     font-size: 24px;
