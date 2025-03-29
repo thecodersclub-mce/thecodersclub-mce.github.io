@@ -54,6 +54,30 @@ header {
     background-color: #00408f;
 }
 
+/* Titles Styling */
+.site-title {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+    white-space: nowrap; /* Prevent text wrapping */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.college-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 0; /* Remove default margin */
+}
+
+/* Favicon Logo Styling */
+.favicon-logo {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+}
+
 /* Menu Toggle Button */
 .menu-toggle {
     background-color: #0056b3; /* Add a background color */
@@ -67,15 +91,15 @@ header {
 }
 
 .menu-toggle:hover {
-    background-color: #00408f;
-    transform: scale(1.05);
-    border-color: #003a70;
+    background-color: #00408f; /* Darker background on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    border-color: #003a70; /* Change border color on hover */
 }
 
 .menu-toggle:active {
-    background-color: #003a70;
-    transform: scale(0.95);
-    border-color: #002654;
+    background-color: #003a70; /* Even darker background when active */
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+    border-color: #002654; /* Further border color adjustment */
 }
 /* Favicon Logo Styling */
 .favicon-logo {
@@ -93,6 +117,7 @@ header {
     white-space: nowrap; /* Prevent text wrapping */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Menu Container */
 .menu-container {
