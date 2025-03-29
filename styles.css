@@ -1,10 +1,13 @@
 /* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%; /* Ensure full viewport height */
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column; /* Make the layout flexible */
 }
 
 /* Header Styles */
@@ -52,6 +55,7 @@ header {
 
 /* Section Styles */
 section {
+    flex: 1; /* Automatically fills remaining space between header and footer */
     padding: 20px;
     max-width: 1200px;
     margin: auto;
@@ -66,6 +70,7 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
+    position: relative;
 }
 
 /* Responsive Design */
@@ -75,7 +80,7 @@ footer {
     }
 
     .menu-bar {
-        flex-direction: column;
+        flex-direction: column; /* Stack menu items */
     }
 
     .menu-bar a {
