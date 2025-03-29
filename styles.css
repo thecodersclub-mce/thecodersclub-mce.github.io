@@ -12,19 +12,18 @@ header {
     text-align: center;
     background-color: #007BFF;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 10px;
 }
 
 .wide-logo-img {
-    width: 50px;
-    max-width: 50x;
-    height: 50px;
+    width: clamp(150px, 50%, 600px); /* Wide logo scales dynamically */
+    height: auto;
     margin: 10px auto;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: clamp(80px, 10%, 120px); /* Logo dynamically resizes based on device */
+    height: auto;
     display: block;
     margin: 10px auto;
 }
@@ -61,7 +60,7 @@ section {
     border-radius: 10px;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: #00408f;
     color: white;
@@ -70,7 +69,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Tablet and small screens */
     header {
         text-align: center;
     }
@@ -82,9 +81,30 @@ footer {
     .menu-bar a {
         margin: 5px 0;
         font-size: 16px;
+        padding: 8px 12px;
     }
 
     .logo {
-        width: 80px;
+        width: clamp(60px, 15%, 100px); /* Adjust logo size for smaller screens */
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile phones */
+    .wide-logo-img {
+        max-width: 90%; /* Ensure logo fits smaller screen widths */
+    }
+
+    .menu-bar a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    section {
+        padding: 10px;
+        box-shadow: none; /* Simplify layout for mobile */
     }
 }
