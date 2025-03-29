@@ -53,38 +53,37 @@ html, body {
     object-fit: contain;
     display: block;
 }
-
 /* Secondary Menu Bar */
 .secondary-menu {
     width: 100%;
-    background-color: #00408f; /* Menu background color */
+    background-color: #00408f;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow below */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 20px; /* Spacing between menu items */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 5px; /* Reduced gap between menu items */
     font-size: 16px;
-    justify-content: space-between; /* Distribute items evenly */
+    justify-content: flex-start; /* Align items to the start */
 }
 
 /* Menu Items Styling */
 .secondary-menu a {
     text-decoration: none;
-    color: white; /* Menu item text color */
-    padding: 5px 10px;
+    color: white;
+    padding: 3px 8px; /* Reduced padding inside links */
     border-radius: 4px; /* Rounded corners */
     transition: background-color 0.3s ease;
+    margin: 0; /* Remove any extra margins */
 }
 
 .secondary-menu a:hover {
-    background-color: #003a70; /* Slightly darker on hover */
+    background-color: #003a70; /* Slightly darker hover effect */
 }
 
 .secondary-menu .active {
     font-weight: bold; /* Highlight active page */
     text-decoration: underline;
 }
-
 /* Content Section */
 .content {
     padding: 30px;
