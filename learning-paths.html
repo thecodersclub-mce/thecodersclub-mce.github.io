@@ -4,59 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Paths - The Coders Club</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
-        nav {
-            text-align: center;
-            margin: 15px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #007BFF;
-            margin: 0 15px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-    </style>
+    <!-- Link to Favicon -->
+    <link rel="icon" href="MCE_tab.png" type="image/png">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Learning Paths</h1>
-    </header>
-    <nav>
+    <!-- Blue Container -->
+    <div class="blue-container">
+        <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
+        <div class="titles">
+            <h1 class="college-name">Mangayarkarasi College of Engineering</h1>
+            <h2 class="site-title">The Coders Club</h2>
+        </div>
+    </div>
+
+    <!-- Secondary Menu Bar -->
+    <nav class="secondary-menu">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
+        <a href="learning-paths.html" class="active">Learning Paths</a>
         <a href="leaderboard.html">Leaderboard</a>
+        <a href="login.html">Login</a>
     </nav>
-    <section>
-        <h2>Choose Your Path</h2>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <h2>Learning Paths</h2>
+        <p>Select your learning path from the options below. These paths are designed to help you enhance your skills and excel in programming:</p>
         <ul>
             <li><a href="java.html">Java</a></li>
             <li><a href="python.html">Python</a></li>
             <li><a href="html.html">HTML</a></li>
         </ul>
     </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Created by The Coders Club</p>
+    </footer>
 </body>
 </html>
