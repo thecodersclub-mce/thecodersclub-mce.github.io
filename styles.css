@@ -2,13 +2,11 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensure full height for the viewport */
+    height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column; /* Use flexbox for layout */
 }
 
 /* Blue Container */
@@ -55,8 +53,8 @@ html, body {
 
 /* Secondary Menu Bar */
 .secondary-menu {
-    display: flex; /* Keep items inline for default view */
-    flex-wrap: nowrap; /* Prevent wrapping by default */
+    display: flex; /* Default inline layout for laptop and larger screens */
+    flex-wrap: nowrap; /* Prevent wrapping unless specified */
     background-color: #00408f; /* Menu background */
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
@@ -79,23 +77,16 @@ html, body {
 /* Responsive Design for Mobile View */
 @media (max-width: 768px) {
     .secondary-menu {
-        flex-wrap: wrap; /* Allow wrapping for small screens */
+        flex-wrap: wrap; /* Enable wrapping for small screens */
+        justify-content: space-between; /* Align items neatly */
     }
 
-    .secondary-menu .login {
-        width: 100%; /* Make Login take full width */
-        text-align: center; /* Center-align Login */
-        margin-top: 10px; /* Add spacing below the rest of the menu */
+    .leaderboard {
+        order: 1; /* Ensure Leaderboard comes first */
     }
-}
 
-/* Footer Styles */
-footer {
-    background-color: #00408f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    border-top: 3px solid #0056b3;
-    margin-top: auto; /* Push footer to the bottom */
+    .login {
+        order: 2; /* Ensure Login comes right after Leaderboard */
+        margin-left: auto; /* Adjust position for spacing */
+    }
 }
