@@ -38,30 +38,15 @@ header {
     color: white;
     font-size: 24px;
     cursor: pointer;
-    display: none; /* Hidden by default for desktop view */
     margin-right: 15px;
     z-index: 1000; /* Ensure toggle stays visible */
 }
 
-.favicon-logo {
-    width: 50px;
-    height: auto;
-    margin-right: 15px;
-    object-fit: contain;
-}
-
-.site-title {
-    font-size: 24px;
-    margin: 0;
-    white-space: nowrap; /* Prevent text wrapping */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 /* Navigation Menu */
 .menu-bar {
-    display: flex; /* Default visible state */
+    display: none; /* Hidden by default for all screen sizes */
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; /* Allows wrapping */
     background-color: #0056b3;
     padding: 12px 0;
     border-top: 2px solid #007BFF;
@@ -69,15 +54,13 @@ header {
     top: 60px; /* Position below header */
     left: 0;
     width: 100%;
-    transform: translateY(-100%); /* Initially hidden */
-    transition: transform 0.3s ease-in-out; /* Smooth slide animation */
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center menu items */
     z-index: 998; /* Ensure menu appears above content */
 }
 
 .menu-bar.show {
-    transform: translateY(0); /* Show menu when toggled */
+    display: flex; /* Show menu when toggled */
 }
 
 .menu-bar a {
@@ -118,67 +101,24 @@ footer {
     border-top: 3px solid #0056b3; /* Add footer border */
 }
 
-/* Animations */
-.menu-bar a:hover {
-    animation: pulse 0.4s ease-in-out;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Responsive Design: Tablet View */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show toggle button for smaller screens */
-    }
-
     .menu-bar {
-        display: flex;
+        display: none; /* Start hidden */
     }
 
-    .favicon-logo {
-        width: 40px;
-    }
-
-    .site-title {
-        font-size: 20px; /* Adjust size for smaller screens */
-    }
-
-    section {
-        margin-top: 140px; /* Adjust for expanded menu */
+    .menu-toggle {
+        display: block; /* Show toggle button */
     }
 }
 
-/* Responsive Design: Mobile View */
-@media (max-width: 480px) {
-    .favicon-logo {
-        width: 35px;
-    }
-
-    .site-title {
-        font-size: 18px;
-    }
-
-    .menu-bar a {
-        font-size: 14px;
-        padding: 8px 10px; /* Adjust padding */
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    footer {
-        font-size: 12px; /* Adjust footer size */
-        padding: 15px; /* Adjust footer padding */
+@media (min-width: 769px) {
+    .menu-bar {
+        display: flex; /* Keep menu always visible for larger screens */
+        position: static; /* Normal positioning */
+        flex-direction: row;
+        background-color: transparent; /* Transparent for desktop */
+        border-top: none; /* No border */
+        padding: 0;
     }
 }
