@@ -7,31 +7,29 @@ html, body {
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 /* Header Section */
 header {
-    position: fixed; /* Lock header position at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Stretch header across the screen */
+    width: 100%;
     background: linear-gradient(90deg, #007BFF, #0056b3);
     color: white;
     padding: 15px 20px;
-    display: flex;
-    align-items: center; /* Vertically align logo and text */
-    justify-content: space-between; /* Distribute space */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-    z-index: 999; /* Ensure header stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
 }
 
-/* Logo and Toggle Button */
-.logo-container {
+.header-container {
     display: flex;
-    align-items: center;
+    align-items: center; /* Align elements vertically */
+    justify-content: space-between; /* Space out toggle, logo, and text */
 }
 
+/* Menu Toggle Button */
 .menu-toggle {
     background: none;
     border: none;
@@ -39,24 +37,36 @@ header {
     font-size: 24px;
     cursor: pointer;
     margin-right: 15px;
-    z-index: 1000; /* Ensure toggle stays visible */
+}
+
+.favicon-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+.site-title {
+    font-size: 24px;
+    margin: 0;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation Menu */
 .menu-bar {
-    display: none; /* Hidden by default for all screen sizes */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack items vertically when visible */
     justify-content: center;
-    flex-wrap: wrap; /* Allows wrapping */
+    align-items: center;
     background-color: #0056b3;
     padding: 12px 0;
-    border-top: 2px solid #007BFF;
-    position: fixed; /* Fixed position for toggle menu */
-    top: 60px; /* Position below header */
+    position: fixed;
+    top: 60px;
     left: 0;
     width: 100%;
-    flex-direction: column;
-    align-items: center; /* Center menu items */
-    z-index: 998; /* Ensure menu appears above content */
+    z-index: 998;
+    transition: transform 0.3s ease-in-out;
 }
 
 .menu-bar.show {
@@ -75,19 +85,19 @@ header {
 
 .menu-bar a:hover {
     background-color: #00408f;
-    transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.1);
 }
 
 /* Section Styling */
 section {
-    margin-top: 120px; /* Push content below header */
+    margin-top: 120px;
     padding: 30px;
     max-width: 1200px;
     margin: auto;
     background: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Add shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    border: 1px solid #ccc; /* Add border for structure */
+    border: 1px solid #ccc;
     line-height: 1.6;
 }
 
@@ -98,7 +108,7 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    border-top: 3px solid #0056b3; /* Add footer border */
+    border-top: 3px solid #0056b3;
 }
 
 /* Responsive Design */
@@ -114,11 +124,14 @@ footer {
 
 @media (min-width: 769px) {
     .menu-bar {
-        display: flex; /* Keep menu always visible for larger screens */
-        position: static; /* Normal positioning */
+        display: flex; /* Keep menu visible for laptops and larger screens */
+        position: static; /* Normal positioning for desktop view */
         flex-direction: row;
-        background-color: transparent; /* Transparent for desktop */
-        border-top: none; /* No border */
+        background-color: transparent;
         padding: 0;
+    }
+
+    .header-container {
+        flex-wrap: nowrap; /* Prevent wrapping in larger screens */
     }
 }
