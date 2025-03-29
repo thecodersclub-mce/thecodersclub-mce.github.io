@@ -19,23 +19,19 @@ header {
     align-items: center;
     justify-content: flex-start; /* Align logo and text to the left */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow under the header */
+    position: relative; /* Ensures the layout doesn't shift */
 }
-
+.favicon-logo { width: 50px; /* Automatically adjust the width to maintain aspect ratio */ height: 40px auto; /* Set a consistent height for the logo */ margin-right: 15px; /* Space between the logo and text */ object-fit: contain; /* Ensure the image doesn't stretch or distort */ border-radius: 0; /* Keep the original shape */ }
 /* Site Title */
 .site-title {
     font-size: 24px;
     margin: 0;
     color: white;
-    white-space: nowrap;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for depth */
+    white-space: nowrap; /* Prevents text wrapping */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text depth */
+    position: static; /* Ensures no movement */
 }
-.favicon-logo {
-            width: 50px; /* Automatically adjust the width to maintain aspect ratio */
-            height: 40px auto; /* Set a consistent height for the logo */
-            margin-right: 15px; /* Space between the logo and text */
-            object-fit: contain; /* Ensure the image doesn't stretch or distort */
-            border-radius: 0; /* Keep the original shape */
-        }
+
 /* Navigation Menu */
 .menu-bar {
     display: flex;
@@ -83,88 +79,29 @@ footer {
     border-top: 3px solid #0056b3; /* Border at the top for style */
 }
 
-/* Buttons Inside Section */
-button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); /* Subtle lift effect on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Form Inputs */
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    border-color: #007BFF;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus effect */
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: column; /* Stack logo and text vertically */
         text-align: center;
     }
 
     .favicon-logo {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Adds space below logo on small screens */
     }
 
     .site-title {
-        font-size: 20px;
-    }
-
-    .menu-bar {
-        flex-direction: column;
-    }
-
-    .menu-bar a {
-        margin: 5px 0;
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    section {
-        padding: 20px;
+        font-size: 20px; /* Reduce font size on small screens */
     }
 }
 
 @media (max-width: 480px) {
     .favicon-logo {
-        width: 40px;
+        width: 40px; /* Smaller logo width */
         height: auto;
     }
 
-    .menu-bar a {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-
-    section {
-        padding: 15px;
-        box-shadow: none;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 15px;
+    .site-title {
+        font-size: 18px; /* Further reduce font size */
     }
 }
