@@ -9,6 +9,7 @@ html, body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 /* Header Section */
 header {
     position: fixed;
@@ -35,6 +36,7 @@ header {
     color: white;
     font-size: 24px;
     cursor: pointer;
+    z-index: 1000; /* Ensure toggle is on top */
 }
 
 /* Favicon Logo Styling */
@@ -62,16 +64,19 @@ header {
     align-items: center;
     background-color: #0056b3;
     padding: 12px 0;
-    position: fixed;
-    top: 60px;
+    position: absolute;
+    top: 60px; /* Positioned below header */
     left: 0;
     width: 100%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 998;
-    transition: transform 0.3s ease-in-out;
+    opacity: 0; /* Invisible by default */
 }
 
 .menu-bar.show {
     display: flex; /* Show menu when toggled */
+    transform: translateY(0); /* Reset position */
+    opacity: 1; /* Fade-in effect */
 }
 
 .menu-bar a {
@@ -87,31 +92,6 @@ header {
 .menu-bar a:hover {
     background-color: #00408f;
     transform: scale(1.1); /* Slight zoom effect */
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show toggle button on smaller screens */
-    }
-
-    .menu-bar {
-        display: none; /* Hidden by default for mobile */
-    }
-}
-
-@media (min-width: 769px) {
-    .menu-bar {
-        display: flex; /* Always show menu for larger screens */
-        position: static;
-        flex-direction: row;
-        background-color: transparent;
-        padding: 0;
-    }
-
-    .header-container {
-        flex-wrap: nowrap; /* Prevent wrapping in larger screens */
-    }
 }
 
 /* Section Styling */
@@ -137,23 +117,23 @@ footer {
     border-top: 3px solid #0056b3;
 }
 
-/* Responsive Design */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-    .menu-bar {
-        display: none; /* Start hidden */
+    .menu-toggle {
+        display: block; /* Show toggle button on smaller screens */
     }
 
-    .menu-toggle {
-        display: block; /* Show toggle button */
+    .menu-bar {
+        display: none; /* Initially hidden on small screens */
     }
 }
 
 @media (min-width: 769px) {
     .menu-bar {
-        display: flex; /* Keep menu visible for laptops and larger screens */
-        position: static; /* Normal positioning for desktop view */
+        display: flex; /* Always show menu on larger screens */
+        position: static; /* Reset position for desktop */
         flex-direction: row;
-        background-color: transparent;
+        background-color: transparent; /* Remove background for larger screens */
         padding: 0;
     }
 
