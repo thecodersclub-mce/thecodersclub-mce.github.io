@@ -8,6 +8,20 @@ html, body {
     color: #333;
     box-sizing: border-box;
 }
+/* Section Styling */
+section {
+    margin-top: 200px; /* Push content below header */
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    line-height: 1.6;
+    font-family: inherit; /* Apply Apple's font for section text */
+}
+
 
 /* Blue Container */
 .blue-container {
