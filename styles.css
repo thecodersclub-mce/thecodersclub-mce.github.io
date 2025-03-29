@@ -7,31 +7,18 @@ html, body {
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
-/* Header Section */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #007BFF, #0056b3);
-    color: white;
-    padding: 10px 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    display: flex;
-    flex-direction: column; /* Stack logo, text, and menu vertically */
-    gap: 10px; /* Spacing between elements */
-}
-
-/* Header Container */
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between elements */
-    width: 100%;
+/* Blue Container */
+.blue-container {
+    position: relative;
+    width: 100%; /* Full width */
+    background-color: #0056b3; /* Blue background */
+    padding: 20px; /* Spacing inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+    display: flex; /* Flexbox for alignment */
+    gap: 20px; /* Space between logo and text */
+    align-items: center; /* Vertically align logo and text */
 }
 
 /* Titles Styling */
@@ -45,7 +32,7 @@ header {
     font-size: 18px;
     font-weight: bold;
     color: white;
-    margin: 0; /* Remove default margin */
+    margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add shadow effect */
 }
 
@@ -59,24 +46,19 @@ header {
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 60px; /* Ensure visibility with larger width */
-    height: auto; /* Maintain aspect ratio */
+    width: 60px;
+    height: auto;
     object-fit: contain;
-    margin: 0;
-    display: block; /* Make sure it's visible */
 }
 
 /* Secondary Menu Bar */
 .secondary-menu {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #0056b3;
+    width: 100%;
+    background-color: #00408f; /* Menu background */
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-    border-radius: 5px;
     display: flex;
-    gap: 15px; /* Space between menu items */
+    gap: 20px; /* Space between menu items */
     font-size: 16px;
 }
 
@@ -89,7 +71,7 @@ header {
 }
 
 .secondary-menu a:hover {
-    background-color: #00408f;
+    background-color: #003a70; /* Darker hover effect */
 }
 
 /* Footer Styles */
