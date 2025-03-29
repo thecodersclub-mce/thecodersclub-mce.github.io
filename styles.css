@@ -17,7 +17,6 @@ html, body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: row; /* Horizontal alignment */
     gap: 20px;
     align-items: center;
 }
@@ -50,7 +49,7 @@ html, body {
     width: 60px;
     height: auto;
     object-fit: contain;
-    display: block; /* Ensure visibility */
+    display: block;
 }
 
 /* Secondary Menu Bar */
@@ -62,7 +61,7 @@ html, body {
     display: flex;
     gap: 20px;
     font-size: 16px;
-    justify-content: space-between; /* Space menu items equally */
+    justify-content: space-between;
 }
 
 .secondary-menu a {
@@ -94,6 +93,18 @@ html, body {
     line-height: 1.6;
 }
 
+/* Time-Table Section */
+.time-table {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    margin-bottom: 30px; /* Add space above the footer */
+}
+
 /* Footer Styles */
 footer {
     background-color: #00408f;
@@ -102,5 +113,4 @@ footer {
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3;
-    margin-top: auto; /* Push footer to the bottom */
 }
