@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Learning Path</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        nav {
+            text-align: center;
+            margin: 15px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .module-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .navigation-buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Learning Path</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="learning-paths.html">Back to Learning Paths</a>
+    </nav>
+    <div class="module-container">
+        <h2>Module Videos</h2>
+        <!-- Video Player -->
+        <iframe id="videoPlayer" src="https://www.youtube.com/embed/x1RCEvYRTz0" allowfullscreen></iframe>
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button onclick="previousVideo()">Previous</button>
+            <button onclick="nextVideo()">Next</button>
+        </div>
+    </div>
+    <script>
+        // List of video IDs in the playlist
+        const videos = [
+            "x1RCEvYRTz0",  // Video 1: Java Basics
+            "VIDEO_ID2",    // Video 2: Java OOP Concepts
+            "VIDEO_ID3",    // Video 3: Java File Handling
+            "VIDEO_ID4"     // Video 4: Debugging Techniques
+        ];
+        let currentIndex = 0; // Track the current video
+
+        // Function to load the previous video
+        function previousVideo() {
+            if (currentIndex > 0) {
+                currentIndex -= 1;
+                document.getElementById("videoPlayer").src = `https://www.youtube.com/embed/${videos[currentIndex]}`;
+            } else {
+                alert("You are already at the first video!");
+            }
+        }
+
+        // Function to load the next video
+        function nextVideo() {
+            if (currentIndex < videos.length - 1) {
+                currentIndex += 1;
+                document.getElementById("videoPlayer").src = `https://www.youtube.com/embed/${videos[currentIndex]}`;
+            } else {
+                alert("You are already at the last video!");
+            }
+        }
+    </script>
+</body>
+</html>
