@@ -53,11 +53,11 @@ html, body {
 
 /* Secondary Menu Bar */
 .secondary-menu {
-    width: 100%; /* Full width for consistency */
-    background-color: #00408f; /* Darker blue background */
-    padding: 10px; /* Spacing inside the menu */
+    display: flex; /* Keep items inline for default view */
+    flex-wrap: nowrap; /* Prevent wrapping by default */
+    background-color: #00408f; /* Menu background */
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-    display: flex;
     gap: 20px; /* Space between menu items */
     font-size: 16px;
 }
@@ -74,23 +74,15 @@ html, body {
     background-color: #003a70; /* Darker hover effect */
 }
 
-/* Score Section */
-.score {
-    background-color: #f4f4f4;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 20px; /* Spacing below menu */
-}
-
 /* Responsive Design for Mobile View */
 @media (max-width: 768px) {
     .secondary-menu {
-        flex-wrap: wrap; /* Wrap menu items */
+        flex-wrap: wrap; /* Allow wrapping for small screens */
     }
-    .score {
-        margin-top: 0; /* Remove extra spacing */
-        position: relative; /* Position score below menu */
+
+    .secondary-menu .login {
+        width: 100%; /* Make Login take full width */
+        text-align: center; /* Center-align Login */
+        margin-top: 10px; /* Add spacing below the rest of the menu */
     }
 }
