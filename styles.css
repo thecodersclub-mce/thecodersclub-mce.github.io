@@ -20,16 +20,13 @@ header {
     justify-content: flex-start; /* Align logo and text to the left */
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 50px; /* Small and precise size */
-    height: 50px; /* Consistent height */
-    margin-right: 15px; /* Space between logo and text */
+    width: auto; /* Automatically adjust the width to maintain aspect ratio */
+    height: 40px; /* Set a consistent height for the logo */
+    margin-right: 15px; /* Space between the logo and text */
+    object-fit: contain; /* Ensure the image doesn't stretch or distort */
+    border-radius: 0; /* Keep the original shape */
 }
 
 .site-title {
