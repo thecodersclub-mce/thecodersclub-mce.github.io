@@ -103,23 +103,6 @@ header {
 }
 
 /* Navigation Menu */
-.menu-bar {
-    display: none; /* Hidden by default */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center;
-    align-items: center;
-    background-color: #0056b3;
-    padding: 12px 0;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    z-index: 998;
-    opacity: 0; /* Invisible by default */
-}
-
-.menu-bar.show {
-    display: flex; /* Show menu when toggled */
-    opacity: 1; /* Fade-in effect */
-}
-
 .menu-bar a {
     text-decoration: none;
     color: white;
