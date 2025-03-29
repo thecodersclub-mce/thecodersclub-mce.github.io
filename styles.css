@@ -9,6 +9,7 @@ html, body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 /* Header Section */
 header {
     position: fixed;
@@ -65,41 +66,22 @@ header {
     transition: all 0.3s ease; /* Smooth hover effects */
 }
 
-/* Hover Effect for Toggle Button */
 .menu-toggle:hover {
-    background-color: #00408f; /* Darker background on hover */
-    transform: scale(1.05); /* Slight zoom on hover */
-    border-color: #003a70; /* Change border color on hover */
+    background-color: #00408f;
+    transform: scale(1.05);
+    border-color: #003a70;
 }
 
-/* Active State for Button */
 .menu-toggle:active {
-    background-color: #003a70; /* Even darker background when active */
-    transform: scale(0.95); /* Slight shrink effect when clicked */
-    border-color: #002654; /* Further border color adjustment */
-}
-
-/* Favicon Logo Styling */
-.favicon-logo {
-    width: 40px;
-    height: auto;
-    object-fit: contain;
-    margin: 0;
-}
-
-/* Site Title Styling */
-.site-title {
-    font-size: 20px;
-    margin: 0;
-    color: white;
-    white-space: nowrap; /* Prevent text wrapping */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #003a70;
+    transform: scale(0.95);
+    border-color: #002654;
 }
 
 /* Menu Container */
 .menu-container {
     margin-top: 10px; /* Add spacing below the header */
-    background-color: #00408f; /* Background for toggle menu container */
+    background-color: #00408f;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
@@ -163,7 +145,7 @@ footer {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show toggle button on smaller screens */
+        display: block;
     }
 
     .menu-bar {
@@ -173,10 +155,10 @@ footer {
 
 @media (min-width: 769px) {
     .menu-bar {
-        display: flex; /* Always show menu on larger screens */
-        position: static; /* Reset position for desktop */
+        display: flex;
+        position: static;
         flex-direction: row;
-        background-color: transparent; /* Remove background for larger screens */
+        background-color: transparent;
         padding: 0;
     }
 }
