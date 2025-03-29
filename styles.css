@@ -12,23 +12,25 @@ html, body {
 
 /* Header Styles */
 header {
-    text-align: center;
     background-color: #007BFF;
     color: white;
-    padding: 20px 10px;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .wide-logo-img {
-    width: clamp(150px, 50%, 600px); /* Wide logo scales dynamically */
+    width: clamp(80px, 10%, 120px); /* Dynamic resizing of logo */
     height: auto;
-    margin: 10px auto;
+    margin-right: 15px; /* Space between logo and text */
 }
 
-.logo {
-    width: clamp(80px, 10%, 120px); /* Logo dynamically resizes based on device */
-    height: auto;
-    display: block;
-    margin: 10px auto;
+.logo-container h1 {
+    font-size: 24px;
+    margin: 0; /* Remove unwanted margins */
 }
 
 /* Navigation Menu */
@@ -64,30 +66,27 @@ section {
     border-radius: 10px;
 }
 
-/* About Us (outside container) */
-#about {
-    width: 100%; /* Full page width */
-    padding: 20px;
-    margin: 0; /* Removes any additional margins */
-    background-color: #f4f4f4; /* Optional: background color */
-    text-align: center; /* Center-align content */
-    box-shadow: none; /* Remove container-style shadow */
-    border-radius: 0; /* Remove rounded corners */
-}
-
 /* Footer Styles */
 footer {
     background-color: #00408f;
     color: white;
     text-align: center;
     padding: 15px;
-    position: relative;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) { /* Tablet and small screens */
-    header {
-        text-align: center;
+    .logo-container {
+        flex-direction: column; /* Stack logo and text */
+        text-align: center; /* Center align on smaller screens */
+    }
+
+    .wide-logo-img {
+        margin: 0 auto 10px auto; /* Center logo */
+    }
+
+    .logo-container h1 {
+        font-size: 20px;
     }
 
     .menu-bar {
@@ -98,18 +97,6 @@ footer {
         margin: 5px 0;
         font-size: 16px;
         padding: 8px 12px;
-    }
-
-    .logo {
-        width: clamp(60px, 15%, 100px); /* Adjust logo size for smaller screens */
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    #about {
-        padding: 10px; /* Adjust padding for smaller screens */
     }
 }
 
@@ -126,9 +113,5 @@ footer {
     section {
         padding: 10px;
         box-shadow: none; /* Simplify layout for mobile */
-    }
-
-    #about {
-        font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
