@@ -7,50 +7,66 @@ html, body {
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchors */
 }
 
 /* Header Section */
 header {
-    position: fixed; /* Lock position at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Stretch header across the screen */
+    width: 100%;
     background: linear-gradient(90deg, #007BFF, #0056b3); /* Gradient background */
     color: white;
     padding: 15px 20px;
-    display: flex; /* Enable Flexbox */
+    display: flex;
     align-items: center; /* Align logo and text vertically */
-    justify-content: space-between; /* Spread elements in header */
+    justify-content: space-between; /* Space out elements in header */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-    z-index: 999; /* Ensure header stays on top */
+    z-index: 999;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none; /* Hidden in desktop view */
 }
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 50px; /* Fixed width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 15px; /* Spacing next to the logo */
-    object-fit: contain; /* Prevent distortion */
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+    object-fit: contain;
 }
 
 /* Site Title Styling */
 .site-title {
     font-size: 24px;
     margin: 0;
-    color: white;
-    white-space: nowrap; /* Prevents text wrapping */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add depth */
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation Menu */
 .menu-bar {
-    display: flex; /* Flexbox for layout */
-    justify-content: center; /* Center align items */
-    flex-wrap: wrap; /* Allow wrapping on small screens */
-    background-color: #0056b3; /* Background color for navigation */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #0056b3;
     padding: 12px 0;
     border-top: 2px solid #007BFF;
-    overflow: hidden; /* Prevent scrolling issues */
 }
 
 .menu-bar a {
@@ -60,24 +76,24 @@ header {
     font-size: 18px;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .menu-bar a:hover {
     background-color: #00408f;
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1);
 }
 
-/* Main Content Section */
+/* Section Styling */
 section {
-    margin-top: 80px; /* Push content below fixed header */
+    margin-top: 80px;
     padding: 30px;
     max-width: 1200px;
-    margin: 20px auto;
+    margin-left: auto;
+    margin-right: auto;
     background: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Add shadow */
     border-radius: 10px;
-    border: 1px solid #ccc; /* Add subtle border */
     line-height: 1.6;
 }
 
@@ -88,10 +104,27 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    border-top: 3px solid #0056b3; /* Footer border */
+    border-top: 3px solid #0056b3;
 }
 
-/* Tablet View (max-width: 768px) */
+/* Animations */
+.menu-bar a:hover {
+    animation: pulse 0.4s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design: Tablet View */
 @media (max-width: 768px) {
     header {
         flex-direction: column; /* Stack elements vertically */
@@ -100,48 +133,56 @@ footer {
     }
 
     .favicon-logo {
-        margin-bottom: 10px; /* Add spacing below logo */
-        width: 40px; /* Adjust logo size */
+        margin-bottom: 10px;
+        width: 40px;
     }
 
     .site-title {
-        font-size: 20px; /* Adjust font size */
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button */
     }
 
     .menu-bar {
-        flex-direction: column; /* Stack menu vertically */
-        align-items: center; /* Center items */
-        padding: 10px 0;
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-bar.show {
+        display: flex; /* Show menu when toggle is activated */
     }
 
     .menu-bar a {
-        font-size: 16px; /* Adjust font size */
-        padding: 8px 12px; /* Adjust padding for smaller screens */
-        margin: 5px 0; /* Add spacing between items */
+        font-size: 16px;
+        margin: 5px 0;
+        padding: 8px 12px;
     }
 }
 
-/* Mobile View (max-width: 480px) */
+/* Responsive Design: Mobile View */
 @media (max-width: 480px) {
     .favicon-logo {
-        width: 35px; /* Adjust logo size for smaller screens */
+        width: 35px;
     }
 
     .site-title {
-        font-size: 18px; /* Adjust font size */
+        font-size: 18px;
     }
 
     .menu-bar a {
-        font-size: 14px; /* Smaller font size */
-        padding: 8px 10px; /* Adjust padding */
+        font-size: 14px;
+        padding: 8px 10px;
     }
 
     section {
-        padding: 15px; /* Adjust padding */
+        padding: 15px;
     }
 
     footer {
-        font-size: 12px; /* Smaller font size */
-        padding: 15px; /* Adjust footer padding */
+        font-size: 12px;
+        padding: 15px;
     }
 }
