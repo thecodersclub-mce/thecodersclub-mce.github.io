@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; /* Apple's font first */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; /* Use Apple's font */
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
@@ -27,6 +27,7 @@ header {
     gap: 10px; /* Spacing between elements */
 }
 
+/* Header Container */
 .header-container {
     display: flex;
     align-items: center;
@@ -46,8 +47,8 @@ header {
     font-weight: bold;
     color: white;
     margin: 0; /* Remove default margin */
-    white-space: nowrap;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    font-family: inherit; /* Inherit Apple's font */
 }
 
 .site-title {
@@ -56,6 +57,7 @@ header {
     color: white;
     white-space: nowrap; /* Prevent text wrapping */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: inherit; /* Inherit Apple's font */
 }
 
 /* Favicon Logo Styling */
@@ -72,6 +74,7 @@ header {
     gap: 20px; /* Space between menu items */
     margin-left: 10px; /* Slight indentation */
     font-size: 16px;
+    font-family: inherit; /* Inherit Apple's font for menu items */
 }
 
 .secondary-menu a {
@@ -80,6 +83,7 @@ header {
     padding: 5px 10px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    font-family: inherit; /* Ensure Apple's font is applied */
 }
 
 .secondary-menu a:hover {
@@ -97,6 +101,7 @@ section {
     border-radius: 10px;
     border: 1px solid #ccc;
     line-height: 1.6;
+    font-family: inherit; /* Apply Apple's font for section text */
 }
 
 /* Footer Styles */
@@ -107,4 +112,12 @@ footer {
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3;
+    font-family: inherit; /* Apply Apple's font */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .secondary-menu {
+        flex-wrap: wrap; /* Adjust menu layout on smaller screens */
+    }
 }
