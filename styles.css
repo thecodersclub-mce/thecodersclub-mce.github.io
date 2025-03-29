@@ -52,6 +52,7 @@ header {
 .secondary-menu a:hover {
     background-color: #00408f;
 }
+
 /* Menu Toggle Button */
 .menu-toggle {
     background-color: #0056b3; /* Add a background color */
