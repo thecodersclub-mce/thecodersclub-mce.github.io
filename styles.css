@@ -23,12 +23,13 @@ header {
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: auto;
-    height: 40px;
-    margin-right: 15px;
-    object-fit: contain;
-    border-radius: 0;
+    width: auto; /* Automatically adjust the width to maintain aspect ratio */
+    height: 40px; /* Set a consistent height for the logo */
+    margin-right: 15px; /* Space between the logo and text */
+    object-fit: contain; /* Ensure the image doesn't stretch or distort */
+    border-radius: 0; /* Keep the original shape */
 }
+
 
 /* Site Title */
 .site-title {
