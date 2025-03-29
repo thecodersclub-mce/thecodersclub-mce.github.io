@@ -6,27 +6,36 @@
     <title>The Coders Club</title>
     <!-- Favicon for Browser Tab -->
     <link rel="icon" href="MCE_tab.png" type="image/png">
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Embedded CSS for Favicon Logo -->
+    <style>
+        /* Favicon Logo Styling */
+        .favicon-logo {
+            width: auto; /* Automatically adjust the width to maintain aspect ratio */
+            height: 40px; /* Set a consistent height for the logo */
+            margin-right: 15px; /* Space between the logo and text */
+            object-fit: contain; /* Ensure the image doesn't stretch or distort */
+            border-radius: 0; /* Keep the original shape */
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="logo-container">
             <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
-            <h1 class="site-title">The Coders Club</h1>
+            <h1>The Coders Club</h1>
         </div>
     </header>
-    
+
     <!-- Navigation Menu -->
     <nav class="menu-bar">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="learning-paths.html">Learning Paths</a>
         <a href="leaderboard.html">Leaderboard</a>
-        <a href="login.html">Login</a>
     </nav>
-    
+
     <!-- Main Content Section -->
     <section id="about">
         <h2>About Us</h2>
