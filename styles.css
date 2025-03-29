@@ -19,7 +19,7 @@ header {
     padding: 15px 20px;
     display: flex; /* Enable Flexbox */
     align-items: center; /* Align logo and text vertically */
-    justify-content: space-between; /* Distribute space between elements */
+    justify-content: space-between; /* Spread elements in the header */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for aesthetic */
     z-index: 999; /* Ensure header stays on top of other elements */
 }
@@ -45,11 +45,10 @@ header {
 .menu-bar {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     background-color: #0056b3;
     padding: 12px 0;
     border-top: 2px solid #007BFF; /* Border to separate from header */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    overflow: hidden; /* Prevent menu items from spilling */
 }
 
 .menu-bar a {
@@ -57,9 +56,9 @@ header {
     color: white;
     margin: 0 10px;
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
 }
 
 .menu-bar a:hover {
@@ -91,38 +90,52 @@ footer {
     border-top: 3px solid #0056b3; /* Border at the top for style */
 }
 
-/* Responsive Design for Navigation Menu */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and text vertically */
+        text-align: center;
+    }
+
+    .favicon-logo {
+        margin-bottom: 10px; /* Add space below the logo */
+    }
+
+    .site-title {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+
     .menu-bar {
         flex-direction: column; /* Stack menu items vertically */
-        align-items: center; /* Center-align menu items */
+        align-items: center;
     }
 
     .menu-bar a {
-        margin: 5px 0; /* Add space between menu items */
+        margin: 8px 0; /* Space out items vertically */
         font-size: 16px; /* Adjust font size */
-        padding: 8px 12px; /* Reduce padding for smaller screens */
+        padding: 8px 12px; /* Reduce padding for better fit */
     }
 }
 
+/* Responsive Design for Very Small Screens (e.g., iPhone 6s) */
 @media (max-width: 480px) {
     .favicon-logo {
-        width: 40px; /* Smaller logo width */
-        height: auto;
+        width: 40px; /* Smaller logo size for very small screens */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .menu-bar a {
-        font-size: 14px; /* Smaller font size */
-        padding: 8px 10px; /* Adjust padding */
+        font-size: 14px; /* Reduce font size further */
+        padding: 8px 10px; /* Adjust padding for mobile */
     }
 
     section {
-        padding: 15px;
-        box-shadow: none; /* Simplify layout for mobile */
+        padding: 15px; /* Reduce padding in content sections */
+        box-shadow: none; /* Simplify layout for smaller screens */
     }
 
     footer {
-        font-size: 12px;
-        padding: 15px;
+        font-size: 12px; /* Reduce footer font size */
+        padding: 15px; /* Adjust footer padding */
     }
 }
