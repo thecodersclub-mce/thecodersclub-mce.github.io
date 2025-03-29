@@ -8,25 +8,23 @@ html, body {
     color: #333;
     display: flex;
     flex-direction: column;
-}
-/* Header Section */
+}/* Header Section */
 header {
     background: linear-gradient(90deg, #007BFF, #0056b3); /* Gradient background */
     color: white;
     padding: 15px 20px;
-    display: flex; /* Enable Flexbox */
+    display: flex; /* Enable Flexbox for horizontal alignment */
     align-items: center; /* Align logo and text vertically */
     justify-content: flex-start; /* Align logo and text to the left */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow under the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for aesthetic */
 }
 
 /* Favicon Logo Styling */
 .favicon-logo {
     width: 50px; /* Fixed width */
-    height: 40px; /* Fixed height */
+    height: auto; /* Maintain aspect ratio */
     margin-right: 15px; /* Space between the logo and text */
-    object-fit: contain; /* Keep the image proportionate */
-    border-radius: 0; /* Keep the original shape */
+    object-fit: contain; /* Prevent distortion */
 }
 
 /* Site Title */
@@ -34,8 +32,9 @@ header {
     font-size: 24px;
     margin: 0;
     color: white;
-    white-space: nowrap; /* Prevents text wrapping */
+    white-space: nowrap; /* Prevents text from wrapping */
 }
+
 
 /* Navigation Menu */
 .menu-bar {
