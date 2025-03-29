@@ -2,32 +2,31 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensure full height for the viewport */
+    height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column; /* Use flexbox for layout */
 }
 
 /* Blue Container */
 .blue-container {
     position: relative;
-    width: 100%; /* Full width for rectangle effect */
-    background-color: #0056b3; /* Blue background */
-    padding: 20px; /* Spacing inside the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    display: flex; /* Flexbox for alignment */
-    gap: 20px; /* Space between logo and text */
-    align-items: center; /* Vertically align logo and text */
+    width: 100%;
+    background-color: #0056b3;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Horizontal alignment */
+    gap: 20px;
+    align-items: center;
 }
 
 /* Titles Styling */
 .titles {
     display: flex;
-    flex-direction: column; /* Stack titles vertically */
-    gap: 5px; /* Space between lines */
+    flex-direction: column;
+    gap: 5px;
 }
 
 .college-name {
@@ -35,33 +34,35 @@ html, body {
     font-weight: bold;
     color: white;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add shadow effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .site-title {
     font-size: 20px;
     margin: 0;
     color: white;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 60px; /* Visible size */
-    height: auto; /* Maintain aspect ratio */
+    width: 60px;
+    height: auto;
     object-fit: contain;
+    display: block; /* Ensure visibility */
 }
 
 /* Secondary Menu Bar */
 .secondary-menu {
-    display: flex; /* Default inline layout for laptop and larger screens */
-    flex-wrap: nowrap; /* Prevent wrapping unless specified */
-    background-color: #00408f; /* Menu background */
+    width: 100%;
+    background-color: #00408f;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-    gap: 20px; /* Space between menu items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
     font-size: 16px;
+    justify-content: space-between; /* Space menu items equally */
 }
 
 .secondary-menu a {
@@ -73,24 +74,24 @@ html, body {
 }
 
 .secondary-menu a:hover {
-    background-color: #003a70; /* Darker hover effect */
+    background-color: #003a70;
 }
 
-/* Responsive Design for Mobile View */
-@media (max-width: 768px) {
-    .secondary-menu {
-        flex-wrap: wrap; /* Enable wrapping for small screens */
-        justify-content: space-between; /* Align items neatly */
-    }
+.secondary-menu .active {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
-    .leaderboard {
-        order: 1; /* Ensure Leaderboard comes first */
-    }
-
-    .login {
-        order: 2; /* Ensure Login comes right after Leaderboard */
-        margin-left: auto; /* Adjust position for spacing */
-    }
+/* Content Section */
+.content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    line-height: 1.6;
 }
 
 /* Footer Styles */
