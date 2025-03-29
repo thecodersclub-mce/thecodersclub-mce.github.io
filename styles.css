@@ -1,21 +1,23 @@
 /* Global Styles */
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    box-sizing: border-box;
+    margin: 0; /* Reset default margins */
+    padding: 0; /* Reset default padding */
+    height: 100%; /* Full viewport height */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; /* Clean and readable font stack */
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Default text color */
+    box-sizing: border-box; /* Ensures consistent box model */
+    display: flex; /* Added flex for footer alignment */
+    flex-direction: column; /* Ensures proper layout stacking */
 }
 
 /* Blue Container */
 .blue-container {
     position: relative;
     width: 100%;
-    background-color: #0056b3;
+    background-color: #0056b3; /* Deep blue */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
     display: flex;
     gap: 20px;
     align-items: center;
@@ -36,43 +38,43 @@ html, body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Favicon Logo Styling */
-.favicon-logo {
-    width: 40px;
-    height: auto;
-    object-fit: contain;
-    margin: 0;
-}
-
-/* Site Title Styling */
 .site-title {
     font-size: 20px;
     margin: 0;
     color: white;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-/* Secondary Menu Bar */
-.secondary-menu {
-    width: 100%; /* Full width for menu container */
-    background-color: #00408f; /* Navy blue background */
-    padding: 10px; /* Inner spacing for better visibility */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    display: flex; /* Use flexbox for alignment */
-    gap: 5px; /* Spacing between menu items */
-    font-size: 16px; /* Font size for menu items */
-    justify-content: flex-start; /* Align items to the left */
+
+/* Favicon Logo Styling */
+.favicon-logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
-/* Menu Links */
-.secondary-menu a {
-    text-decoration: none; /* Remove underline for links */
-    color: white; /* White text for contrast */
-    padding: 3px 8px; /* Spacing inside each link */
-    border-radius: 4px; /* Slightly rounded corners */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-    margin: 0; /* No external spacing for consistency */
+/* Secondary Menu Bar */
+.secondary-menu {
+    width: 100%;
+    background-color: #00408f;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+    justify-content: flex-start;
 }
+
+.secondary-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 0;
+}
+
 .secondary-menu a:hover {
     background-color: #003a70;
 }
@@ -99,7 +101,7 @@ html, body {
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Spacing between buttons */
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -111,14 +113,14 @@ html, body {
     background-color: #0056b3;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .interactive-button:hover {
-    background-color: #003a70; /* Darker background on hover */
-    transform: scale(1.1); /* Button grows slightly */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: #003a70;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styles */
