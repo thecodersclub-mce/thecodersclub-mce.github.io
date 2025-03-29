@@ -59,11 +59,13 @@ html, body {
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap; /* Adjust layout based on screen size */
+    gap: 15px;
     font-size: 16px;
-    justify-content: space-between;
+    justify-content: space-between; /* Space items evenly */
 }
 
+/* Menu Items Styling */
 .secondary-menu a {
     text-decoration: none;
     color: white;
@@ -93,18 +95,6 @@ html, body {
     line-height: 1.6;
 }
 
-/* Time-Table Section */
-.time-table {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    margin-bottom: 30px; /* Add space above the footer */
-}
-
 /* Footer Styles */
 footer {
     background-color: #00408f;
@@ -113,4 +103,17 @@ footer {
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .secondary-menu {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .secondary-menu a {
+        width: 100%; /* Make menu items full width */
+        text-align: center; /* Center-align text */
+    }
 }
