@@ -53,8 +53,15 @@ header {
 .secondary-menu a:hover {
     background-color: #00408f;
 }
+/* Titles Styling */
+.college-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 0; /* Remove default margin */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Add shadow effect */
+}
 
-/* Site Title Styling */
 .site-title {
     font-size: 20px;
     margin: 0;
@@ -63,12 +70,6 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.college-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    margin: 0; /* Remove default margin */
-}
 
 /* Favicon Logo Styling */
 .favicon-logo {
