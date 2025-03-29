@@ -8,20 +8,6 @@ html, body {
     color: #333;
     box-sizing: border-box;
 }
-/* Section Styling */
-section {
-    margin-top: 200px; /* Push content below header */
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-    background: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    line-height: 1.6;
-    font-family: inherit; /* Apply Apple's font for section text */
-}
-
 
 /* Blue Container */
 .blue-container {
@@ -109,16 +95,30 @@ section {
     margin-bottom: 30px;
 }
 
-/* Time-Table Section */
-.time-table {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    margin-bottom: 30px;
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between buttons */
+    margin-top: 20px;
+}
+
+.interactive-button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #0056b3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.interactive-button:hover {
+    background-color: #003a70; /* Darker background on hover */
+    transform: scale(1.1); /* Button grows slightly */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow */
 }
 
 /* Footer Styles */
