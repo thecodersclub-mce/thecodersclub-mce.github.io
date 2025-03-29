@@ -9,7 +9,6 @@ html, body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 /* Header Section */
 header {
     position: fixed;
@@ -21,12 +20,37 @@ header {
     padding: 10px 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    display: flex;
+    flex-direction: column; /* Stack logo, text, and secondary menu vertically */
+    align-items: flex-start;
+    gap: 10px; /* Spacing between elements */
 }
 
 .header-container {
     display: flex;
     align-items: center;
     gap: 10px; /* Space between elements */
+    width: 100%;
+}
+
+/* Secondary Menu Bar */
+.secondary-menu {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+    margin-left: 10px; /* Slight indentation */
+    font-size: 16px;
+}
+
+.secondary-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-menu a:hover {
+    background-color: #00408f;
 }
 
 /* Menu Toggle Button */
@@ -58,8 +82,8 @@ header {
 
 /* Menu Container */
 .menu-container {
-    margin-top: 60px; /* Position below the header */
-    background-color: #00408f; /* Background for container */
+    margin-top: 10px; /* Add spacing below the header */
+    background-color: #00408f; /* Background for toggle menu container */
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
@@ -99,7 +123,7 @@ header {
 
 /* Section Styling */
 section {
-    margin-top: 150px;
+    margin-top: 200px; /* Push content below header */
     padding: 30px;
     max-width: 1200px;
     margin: auto;
