@@ -22,7 +22,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -37,14 +36,14 @@ jobs:
       
       - name: Cache Busting for Static Assets
         run: |
+          # Only apply cache busting for CSS, JS, and image files
           for file in $(find . -type f -name "*.html"); do
-            sed -i "s/\(href=\|src=\)\(\".*\?\)/\1\2?v=$(date +%s)/" $file
+            sed -i "s/\(href=\|src=\)[\"']\([^\"']*\.\(css\|js\|png\|jpg\|jpeg\|gif\)\)[\"']/\1\2?v=$(date +%s)/" $file
           done
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: '.'
       
       - name: Deploy to GitHub Pages
