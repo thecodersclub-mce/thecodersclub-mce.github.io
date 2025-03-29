@@ -77,6 +77,22 @@ header {
     transform: scale(0.95);
     border-color: #002654;
 }
+/* Favicon Logo Styling */
+.favicon-logo {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+}
+
+/* Site Title Styling */
+.site-title {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+    white-space: nowrap; /* Prevent text wrapping */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
 /* Menu Container */
 .menu-container {
