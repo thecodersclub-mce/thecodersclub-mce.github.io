@@ -65,14 +65,14 @@ section {
 }
 
 /* About Us (outside container) */
-section.outside-container {
+#about {
     width: 100%; /* Full page width */
     padding: 20px;
-    margin: 20px 0; /* Space above and below */
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    margin: 0; /* Removes any additional margins */
+    background-color: #f4f4f4; /* Optional: background color */
     text-align: center; /* Center-align content */
+    box-shadow: none; /* Remove container-style shadow */
+    border-radius: 0; /* Remove rounded corners */
 }
 
 /* Footer Styles */
@@ -107,6 +107,10 @@ footer {
     section {
         padding: 15px;
     }
+
+    #about {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
 }
 
 @media (max-width: 480px) { /* Mobile phones */
@@ -122,5 +126,9 @@ footer {
     section {
         padding: 10px;
         box-shadow: none; /* Simplify layout for mobile */
+    }
+
+    #about {
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
