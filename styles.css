@@ -90,3 +90,14 @@ html, body {
         margin-left: auto; /* Adjust position for spacing */
     }
 }
+
+/* Footer Styles */
+footer {
+    background-color: #00408f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 3px solid #0056b3;
+    margin-top: auto; /* Push footer to the bottom */
+}
