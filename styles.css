@@ -10,30 +10,33 @@ html, body {
     flex-direction: column;
 }
 
-/* Header Styles */
+/* Header Section */
 header {
     background-color: #007BFF;
     color: white;
     padding: 10px 20px;
     display: flex;
     align-items: center; /* Align logo and text vertically */
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Align logo and text to the left */
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 50px; /* Set precise logo width */
-    height: 25px; /* Ensure proportional height with correct unit */
-    margin-right: 10px; /* Space between logo and text */
-    border-radius: 0; /* Maintain original shape (no rounding) */
+    width: 50px; /* Small and precise size */
+    height: 50px; /* Consistent height */
+    margin-right: 15px; /* Space between logo and text */
 }
 
-
-.logo-container h1 {
+.site-title {
     font-size: 24px;
     margin: 0;
-    color: white;
+    color: white; /* Matches header text color */
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 /* Navigation Menu */
@@ -78,17 +81,17 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) { /* Tablet and small screens */
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
     }
 
     .favicon-logo {
-        margin-bottom: 10px; /* Adjust spacing for smaller screens */
+        margin-bottom: 10px;
     }
 
-    .logo-container h1 {
+    .site-title {
         font-size: 20px;
     }
 
@@ -103,9 +106,9 @@ footer {
     }
 }
 
-@media (max-width: 480px) { /* Mobile phones */
+@media (max-width: 480px) {
     .favicon-logo {
-        width: 28px; /* Smaller logo for mobile */
+        width: 40px; /* Smaller logo size */
         height: auto;
     }
 
