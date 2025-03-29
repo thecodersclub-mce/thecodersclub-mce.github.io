@@ -2,11 +2,13 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100%; /* Ensure full height for the viewport */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Use flexbox for layout */
 }
 
 /* Blue Container */
@@ -85,4 +87,15 @@ html, body {
         text-align: center; /* Center-align Login */
         margin-top: 10px; /* Add spacing below the rest of the menu */
     }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #00408f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 3px solid #0056b3;
+    margin-top: auto; /* Push footer to the bottom */
 }
