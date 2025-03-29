@@ -40,22 +40,22 @@ header {
     flex-direction: column; /* Stack titles vertically */
     gap: 5px;
 }
-
 .college-name {
     font-size: 18px;
     font-weight: bold;
-    color: white;
-    margin: 0; /* Remove default margin */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Add shadow effect */
+    color: white; /* Ensure the text color contrasts with the background */
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Add shadow for visibility */
 }
 
 .site-title {
     font-size: 20px;
     margin: 0;
     color: white;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Favicon Logo Styling */
 .favicon-logo {
