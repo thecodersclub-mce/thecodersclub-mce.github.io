@@ -1,53 +1,46 @@
-/* Global Styles */
+/* Global Styles (Default for Desktop) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url("background-image.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header Styles */
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: #007BFF;
     color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo-title {
     display: flex;
     align-items: center;
 }
-/* Logo Styles */
+
 .logo {
-    width: 60px;
+    width: 100px; /* Desktop logo size */
     height: auto;
-    margin-right: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional for depth */
+    margin-right: 15px;
 }
 
-/* Wide Logo Styles */
 .wide-logo-img {
-    width: 100%;
-    max-width: 1200px; /* Adjust for responsiveness */
+    width: 100%; /* Wide logo for website */
+    max-width: 1200px;
     height: auto;
+    margin: 20px auto;
+    display: block;
 }
-/* Menu Bar Styles */
+
+/* Menu Bar */
 .menu-bar {
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: #0056b3;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
 }
 
 .menu-bar a {
@@ -55,97 +48,70 @@ header {
     color: white;
     margin: 0 15px;
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
 .menu-bar a:hover {
     background-color: #00408f;
-    transform: translateY(-3px);
 }
 
 /* Section Styles */
 section {
-    padding: 50px;
-    text-align: center;
-    margin: 20px auto;
+    padding: 20px;
     max-width: 1200px;
-    background: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Buttons */
-button {
-    background-color: #007BFF;
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-section {
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: #00408f;
     color: white;
     text-align: center;
     padding: 15px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
 
-footer a {
-    text-decoration: none;
-    color: #FFD700;
-    margin: 0 10px;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out;
-}
-
-footer a:hover {
-    color: #ffffff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu-bar {
-        flex-direction: column;
-        padding: 15px;
+/* Media Queries */
+@media (max-width: 1024px) { /* Tablet View */
+    .logo {
+        width: 80px; /* Reduce logo size */
     }
 
     .menu-bar a {
-        margin-bottom: 10px;
+        margin: 0 10px;
+        font-size: 16px;
     }
 
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile View */
     header {
         flex-direction: column;
         text-align: center;
     }
 
+    .menu-bar {
+        flex-direction: column;
+    }
+
+    .menu-bar a {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 60px; /* Smaller logo for mobile */
+    }
+
     section {
-        padding: 20px;
-        margin: 10px auto;
+        padding: 10px;
+        box-shadow: none; /* Simplify layout for mobile */
     }
 }
