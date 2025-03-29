@@ -59,10 +59,11 @@ header {
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 40px;
-    height: auto;
+    width: 60px; /* Ensure visibility with larger width */
+    height: auto; /* Maintain aspect ratio */
     object-fit: contain;
     margin: 0;
+    display: block; /* Make sure it's visible */
 }
 
 /* Secondary Menu Bar */
