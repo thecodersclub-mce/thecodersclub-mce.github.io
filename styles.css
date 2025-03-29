@@ -9,27 +9,32 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-
 /* Header Section */
 header {
     background: linear-gradient(90deg, #007BFF, #0056b3); /* Gradient background */
     color: white;
     padding: 15px 20px;
-    display: flex;
-    align-items: center;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Align logo and text vertically */
     justify-content: flex-start; /* Align logo and text to the left */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow under the header */
-    position: relative; /* Ensures the layout doesn't shift */
 }
-.favicon-logo { width: 50px; /* Automatically adjust the width to maintain aspect ratio */ height: 40px auto; /* Set a consistent height for the logo */ margin-right: 15px; /* Space between the logo and text */ object-fit: contain; /* Ensure the image doesn't stretch or distort */ border-radius: 0; /* Keep the original shape */ }
+
+/* Favicon Logo Styling */
+.favicon-logo {
+    width: 50px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    margin-right: 15px; /* Space between the logo and text */
+    object-fit: contain; /* Keep the image proportionate */
+    border-radius: 0; /* Keep the original shape */
+}
+
 /* Site Title */
 .site-title {
     font-size: 24px;
     margin: 0;
     color: white;
     white-space: nowrap; /* Prevents text wrapping */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text depth */
-    position: static; /* Ensures no movement */
 }
 
 /* Navigation Menu */
