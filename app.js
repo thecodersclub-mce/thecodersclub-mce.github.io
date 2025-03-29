@@ -1,5 +1,3 @@
-// JavaScript for interactivity (if needed)
-// Example: Scroll alert for menu links
 document.addEventListener('DOMContentLoaded', () => {
     const menuLinks = document.querySelectorAll('.menu-bar a');
     menuLinks.forEach(link => {
@@ -8,3 +6,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
