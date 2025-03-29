@@ -6,17 +6,21 @@ html, body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    flex-direction: column;
-}/* Header Section */
+}
+
+/* Header Section */
 header {
+    position: fixed; /* Lock position at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretch header across the screen */
     background: linear-gradient(90deg, #007BFF, #0056b3); /* Gradient background */
     color: white;
     padding: 15px 20px;
-    display: flex; /* Enable Flexbox for horizontal alignment */
+    display: flex; /* Enable Flexbox */
     align-items: center; /* Align logo and text vertically */
-    justify-content: flex-start; /* Align logo and text to the left */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for aesthetic */
+    z-index: 999; /* Ensure header stays on top of other elements */
 }
 
 /* Favicon Logo Styling */
@@ -27,50 +31,25 @@ header {
     object-fit: contain; /* Prevent distortion */
 }
 
-/* Site Title */
+/* Site Title Styling */
 .site-title {
     font-size: 24px;
     margin: 0;
     color: white;
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: nowrap; /* Prevents text wrapping */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text depth */
 }
 
-
-/* Navigation Menu */
-.menu-bar {
-    display: flex;
-    justify-content: center;
-    background-color: #0056b3;
-    padding: 12px 0;
-    border-top: 2px solid #007BFF; /* Border to separate from header */
-}
-
-.menu-bar a {
-    text-decoration: none;
-    color: white;
-    margin: 0 20px;
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.menu-bar a:hover {
-    background-color: #00408f;
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-/* Section Styles */
+/* Main Content Section */
 section {
-    flex: 1;
+    margin-top: 80px; /* Push content below the fixed header */
     padding: 30px;
     max-width: 1200px;
-    margin: 20px auto;
+    margin-left: auto;
+    margin-right: auto;
     background: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     border-radius: 10px;
-    border: 1px solid #ccc; /* Soft border around the section */
-    line-height: 1.6;
 }
 
 /* Footer Styles */
@@ -81,31 +60,4 @@ footer {
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3; /* Border at the top for style */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack logo and text vertically */
-        text-align: center;
-    }
-
-    .favicon-logo {
-        margin-bottom: 10px; /* Adds space below logo on small screens */
-    }
-
-    .site-title {
-        font-size: 20px; /* Reduce font size on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .favicon-logo {
-        width: 40px; /* Smaller logo width */
-        height: auto;
-    }
-
-    .site-title {
-        font-size: 18px; /* Further reduce font size */
-    }
 }
