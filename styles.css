@@ -80,20 +80,25 @@ html, body {
     font-weight: bold;
     text-decoration: underline;
 }
-
-/* Main Container */
+/* Center the white login container in the body */
 .content {
-    position: relative;
-    margin: 20px auto; /* Add spacing around the container */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+    position: absolute; /* Position relative to the body */
+    top: 50%; /* Vertically centered */
+    left: 50%; /* Horizontally centered */
+    transform: translate(-50%, -50%); /* Adjust position based on container size */
     padding: 20px;
     max-width: 600px;
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for visibility */
 }
+
 
 /* Background Image Styling */
 body::before {
