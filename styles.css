@@ -36,18 +36,21 @@ html, body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* Favicon Logo Styling */
+.favicon-logo {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+}
+
+/* Site Title Styling */
 .site-title {
     font-size: 20px;
     margin: 0;
     color: white;
+    white-space: nowrap; /* Prevent text wrapping */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Favicon Logo Styling */
-.favicon-logo {
-    width: 60px;
-    height: auto;
-    object-fit: contain;
 }
 
 /* Secondary Menu Bar */
@@ -145,15 +148,6 @@ form input[type="password"]:focus {
     background-color: #0056b3;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #00408f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    border-top: 3px solid #0056b3;
-}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -164,4 +158,18 @@ footer {
     .interactive-button {
         font-size: 14px;
     }
+}
+
+/* Footer Styles */
+footer {
+    position: fixed; /* Ensures footer stays at the bottom */
+    bottom: 0; /* Aligns footer to the bottom */
+    width: 100%; /* Stretches footer across the page */
+    background-color: #00408f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 3px solid #0056b3;
+    z-index: 10; /* Ensures footer stays on top of other elements */
 }
