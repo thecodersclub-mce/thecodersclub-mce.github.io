@@ -28,7 +28,7 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
     display: flex; /* Flexbox for horizontal layout */
     align-items: center; /* Centers the content vertically */
-    gap: 20px; /* Adds space between the logo and text */
+    gap: 15px; /* Adds space between the logo and text */
     color: white;
     justify-content: space-between; /* Ensures logo and text are spaced properly */
 }
