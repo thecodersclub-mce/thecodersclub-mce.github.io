@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - The Coders Club</title>
-    <!-- Link to Favicon -->
+    <!-- Link Favicon -->
     <link rel="icon" href="MCE_tab.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Adjust Time-Table Styling */
+        .time-table {
+            margin-top: -50px; /* Moves the table slightly above its default position */
+            max-width: 1000px; /* Ensures proper width for visibility */
+            padding: 20px; /* Adds spacing around table */
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 8px; /* Smooth edges */
+        }
+        .time-table h2 {
+            text-align: center;
+            color: #0056b3;
+        }
+        .time-table table {
+            width: 100%; /* Ensures table spans the container width */
+            border-collapse: collapse; /* Removes gaps between table borders */
+            text-align: center;
+        }
+        .time-table th, .time-table td {
+            padding: 10px;
+            border: 1px solid #ddd; /* Adds light border */
+        }
+        .time-table thead {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <!-- Invisible Container -->
     <div class="invisible-container">
-        <!-- Blue Container (Header) -->
+        <!-- Blue Container -->
         <div class="blue-container">
             <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
             <div class="titles">
@@ -29,36 +57,11 @@
             <a href="login.html">Login</a>
         </nav>
 
-        <!-- Main Content Section -->
-        <section class="content">
-            <h2>About the Club</h2>
-            <p>The Coders Club is a dynamic and inclusive community where students collaborate, learn, and grow in their coding and technical skills. We aim to create an inspiring environment for all members, fostering innovation and excellence in programming.</p>
-
-            <h2>Board Members</h2>
-            <ul>
-                <li><strong>President:</strong> Yogeshwaran S [3rd Year CSE Department]</li>
-                <li><strong>Vice President:</strong> Mahalakshmi [2nd Year CSE Department]</li>
-                <li><strong>Secretary:</strong> Ananth S [3rd Year CSE Department]</li>
-                <li><strong>Event Manager:</strong> Renugadevi S [3rd Year CSE Department]</li>
-                <li><strong>Public Relations:</strong> Arif [2nd Year CSE Department]</li>
-            </ul>
-
-            <h2>Our Activities</h2>
-            <p>We organize a variety of activities to help members hone their skills and foster collaboration:</p>
-            <ul>
-                <li>Weekly coding challenges and hackathons</li>
-                <li>Monthly technical workshops on topics such as AI, Web Development, and Data Science</li>
-                <li>Guest lectures by industry professionals</li>
-                <li>Project-based learning initiatives</li>
-                <li>Community service projects involving tech solutions</li>
-            </ul>
-        </section>
-
-        <!-- Time-Table Section -->
+        <!-- Time-Table Section (Moved Up) -->
         <section class="time-table">
             <h2>Time-Table</h2>
-            <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
-                <thead style="background-color: #0056b3; color: white;">
+            <table>
+                <thead>
                     <tr>
                         <th>Day</th>
                         <th>Time</th>
@@ -88,6 +91,31 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="content">
+            <h2>About the Club</h2>
+            <p>The Coders Club is a dynamic and inclusive community where students collaborate, learn, and grow in their coding and technical skills. We aim to create an inspiring environment for all members, fostering innovation and excellence in programming.</p>
+
+            <h2>Board Members</h2>
+            <ul>
+                <li><strong>President:</strong> Yogeshwaran S [3rd Year CSE Department]</li>
+                <li><strong>Vice President:</strong> Mahalakshmi [2nd Year CSE Department]</li>
+                <li><strong>Secretary:</strong> Ananth S [3rd Year CSE Department]</li>
+                <li><strong>Event Manager:</strong> Renugadevi S [3rd Year CSE Department]</li>
+                <li><strong>Public Relations:</strong> Arif [2nd Year CSE Department]</li>
+            </ul>
+
+            <h2>Our Activities</h2>
+            <p>We organize a variety of activities to help members hone their skills and foster collaboration:</p>
+            <ul>
+                <li>Weekly coding challenges and hackathons</li>
+                <li>Monthly technical workshops on topics such as AI, Web Development, and Data Science</li>
+                <li>Guest lectures by industry professionals</li>
+                <li>Project-based learning initiatives</li>
+                <li>Community service projects involving tech solutions</li>
+            </ul>
         </section>
 
         <!-- Footer Section -->
