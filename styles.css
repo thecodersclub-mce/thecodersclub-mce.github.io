@@ -119,6 +119,36 @@ html, body {
     margin-bottom: 10px;
     list-style: disc; /* Bullet points */
 }
+/* Time-Table Styling */
+.time-table {
+    margin-top: 20px; /* Spacing from the previous section */
+    max-width: 1000px; /* Proper width for visibility */
+    padding: 20px; /* Adds spacing around the table */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Smooth edges */
+}
+
+.time-table h2 {
+    text-align: center;
+    color: #0056b3;
+}
+
+.time-table table {
+    width: 100%; /* Ensures table spans the container width */
+    border-collapse: collapse; /* Removes gaps between table borders */
+    text-align: center;
+}
+
+.time-table th, .time-table td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Adds light border */
+}
+
+.time-table thead {
+    background-color: #0056b3;
+    color: white; /* White text for header */
+}
 
 /* Footer */
 footer {
