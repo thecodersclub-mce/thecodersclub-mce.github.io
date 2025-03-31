@@ -6,6 +6,8 @@
     <title>Student Login - The Coders Club</title>
     <!-- Link to Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Blue Container -->
@@ -35,6 +37,9 @@
             
             <label for="student-password">Password:</label>
             <input type="password" id="student-password" name="password" required>
+
+            <!-- Add reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="6LeneQUrAAAAACd3KaX1Y6xS07dg0GV1GYTjIUbW"></div>
 
             <button type="submit" class="interactive-button">Login</button>
         </form>
