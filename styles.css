@@ -9,23 +9,14 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Invisible Container */
-.invisible-container {
-    width: 100%; /* Spans the full width */
-    height: auto; /* Adjusts height dynamically */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    background-color: transparent; /* Keeps it invisible */
-}
 
 /* Blue Container (Header) */
 .blue-container {
-    width: 100%; /* Spans the full width, regardless of zoom */
+    width: 100%; /* Spans the full width */
     background-color: #0056b3;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Align items horizontally */
+    display: flex; /* Horizontal layout for logo and titles */
     align-items: center; /* Centers content vertically */
     gap: 20px; /* Space between logo and text */
     color: white;
@@ -59,12 +50,13 @@ html, body {
     background-color: #00408f;
     padding: 10px 20px; /* Adds spacing */
     display: flex; /* Items aligned horizontally */
-    flex-direction: row;
-    gap: 15px;
-    justify-content: flex-start; /* Aligns items to the left */
+    flex-direction: row; /* Keeps menu items in a single line */
+    gap: 15px; /* Space between links */
+    justify-content: flex-start; /* Left alignment */
     align-items: center; /* Centers items vertically */
 }
 
+/* Secondary Menu Links */
 .secondary-menu a {
     text-decoration: none;
     color: white;
@@ -75,12 +67,12 @@ html, body {
 }
 
 .secondary-menu a:hover {
-    background-color: #003a70; /* Hover effect */
+    background-color: #003a70; /* Highlight on hover */
 }
 
 .secondary-menu .active {
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: underline; /* Indicates active state */
 }
 
 /* Footer */
@@ -92,5 +84,6 @@ footer {
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow above */
+    margin-top: auto; /* Pushes footer to the bottom of the page */
 }
