@@ -23,14 +23,15 @@ html, body {
 
 /* Blue Container (Header) */
 .blue-container {
-    width: 100%; /* Spans the full width */
+    margin-top: 0; /* Removes any white space above the blue container */
+    padding: 20px; /* Keeps uniform padding for internal content */
+    width: 100%; /* Ensures the blue container spans the full width */
     background-color: #0056b3;
-    padding: 20px; /* Uniform padding around header content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for elevation */
     display: flex; /* Flexbox for horizontal alignment */
-    align-items: center; /* Vertically centers items */
-    gap: 10px; /* Space between logo and text */
-    color: white;
+    align-items: center; /* Centers content vertically */
+    gap: 10px; /* Adds space between the logo and text */
+    color: white; /* Ensures text color remains white */
 }
 
 /* Logo Styling */
