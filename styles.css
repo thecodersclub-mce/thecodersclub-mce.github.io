@@ -9,6 +9,17 @@ html, body {
     box-sizing: border-box;
 }
 
+/* Invisible Container */
+.invisible-container {
+    width: 100%; /* Spans the full width */
+    height: auto; /* Adjusts height dynamically */
+    display: flex; /* Enables flexible layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers content horizontally */
+    background-color: transparent; /* Keeps the container invisible */
+    padding: 0 20px; /* Adds side padding for better alignment */
+    box-sizing: border-box; /* Includes padding in size calculations */
+}
 
 /* Blue Container (Header) */
 .blue-container {
