@@ -33,56 +33,46 @@ html, body {
     justify-content: space-between; /* Ensures logo and text are spaced properly */
 }
 
-/* Logo Styling */
-.favicon-logo {
-    width: 60px; /* Sets logo width */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: contain; /* Prevents distortion */
-    margin-right: 20px; /* Adds spacing on the right of the logo */
-}
 /* Blue Container (Header) */
 .blue-container {
     width: 100%; /* Ensures the container spans the full width */
     background-color: #0056b3;
-    padding: 20px 40px; /* Adds spacing */
+    padding: 20px; /* Adds uniform spacing around the content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex; /* Flexbox for horizontal layout */
+    display: flex; /* Flexbox for horizontal alignment */
     align-items: center; /* Centers content vertically */
-    gap: 20px; /* Space between logo and text */
+    gap: 10px; /* Reduces gap between logo and text */
     color: white;
 }
 
 /* Logo Styling */
 .favicon-logo {
-    width: 60px;
-    height: auto;
+    width: 60px; /* Sets logo width */
+    height: auto; /* Maintains aspect ratio */
     object-fit: contain;
 }
 
 /* Title Styling */
 .titles {
-    display: flex; /* Flexbox to align titles within the container */
+    display: flex; /* Flexbox to align titles */
     flex-direction: column; /* Stacks title items vertically */
-    flex-grow: 1; /* Pushes text to the right */
-    align-items: flex-start; /* Keeps text aligned to the left inside the container */
-    margin-left: 20px; /* Adds consistent spacing between logo and text */
+    margin-left: 10px; /* Ensures text is close to the logo but not touching */
 }
 
 .college-name {
     font-size: 18px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-    margin: 0;
+    margin: 0; /* Removes unwanted margins */
 }
 
 .site-title {
     font-size: 20px;
+    margin: 0; /* Removes unwanted margins */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    margin: 0;
     white-space: nowrap; /* Prevents text wrapping */
     color: white; /* Ensures consistent title color */
 }
-
 
 /* Secondary Menu */
 .secondary-menu {
