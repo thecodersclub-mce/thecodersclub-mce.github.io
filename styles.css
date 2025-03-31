@@ -21,17 +21,18 @@ html, body {
     box-sizing: border-box; /* Includes padding in width calculations */
 }
 
-/* Blue Container (Header) */
 .blue-container {
-    margin-top: 0; /* Removes any white space above the blue container */
-    padding: 20px; /* Keeps uniform padding for internal content */
-    width: 100%; /* Ensures the blue container spans the full width */
-    background-color: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for elevation */
-    display: flex; /* Flexbox for horizontal alignment */
+    margin: 0; /* Removes all margins around the container */
+    padding: 20px; /* Uniform padding inside the container */
+    position: relative; /* Ensures it's positioned correctly */
+    top: 0; /* Explicitly places it at the top */
+    width: 100%; /* Ensures full-width coverage */
+    background-color: #0056b3; /* Blue background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    display: flex; /* Horizontal alignment */
     align-items: center; /* Centers content vertically */
-    gap: 10px; /* Adds space between the logo and text */
-    color: white; /* Ensures text color remains white */
+    gap: 10px; /* Space between logo and titles */
+    color: white; /* White text color */
 }
 
 /* Logo Styling */
