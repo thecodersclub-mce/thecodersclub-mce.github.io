@@ -1,5 +1,6 @@
 /* Global Styles */
 html, body{
+    top: 0;
     margin: 0; /* Removes default margins */
     padding: 0; /* Removes default padding */
     height: 100%; /* Ensures the body fills the viewport */
