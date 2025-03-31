@@ -44,16 +44,6 @@ html, body {
     object-fit: contain;
     margin: 0;
 }
-
-/* Secondary Menu */
-.secondary-menu {
-    background-color: #00408f;
-    padding: 10px 20px; /* Adds some padding for spacing */
-    display: flex; /* Ensures items are placed horizontally */
-    gap: 15px; /* Adds spacing between links */
-    font-size: 16px;
-    justify-content: flex-start; /* Aligns all items to the left */
-}
 /* Secondary Menu */
 .secondary-menu {
     width: 100vw; /* Full width to fill the screen */
@@ -65,24 +55,22 @@ html, body {
     font-size: 16px;
     justify-content: flex-start; /* Aligns items to the left */
     align-items: center; /* Centers items vertically within the container */
+    text-decoration: none; /* Default styling for links */
+    color: white; /* Default text color */
+    border-radius: 4px; /* Default border radius */
+    font-weight: normal; /* Default font weight */
+    transition: background-color 0.3s ease; /* Hover transition */
 }
 
-.secondary-menu a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.secondary-menu a:hover {
-    background-color: #003a70;
+.secondary-menu:hover {
+    background-color: #003a70; /* Hover state */
 }
 
 .secondary-menu .active {
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: underline; /* Active state */
 }
+
 /* Shared Content Margin */
 .page-content {
     padding: 20px;
