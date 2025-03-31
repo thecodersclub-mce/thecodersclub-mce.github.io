@@ -145,6 +145,18 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px auto; /* Shared margin */
 }
+/* Wrap the main body content in a container */
+.body-container {
+    padding: 20px; /* Space inside the container */
+    margin: 50px; /* Equal spacing from all sides of the screen */
+    background-color: white;
+    border-radius: 8px; /* Adds rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+    max-width: 900px; /* Restrict the width for readability */
+    line-height: 1.6; /* Line spacing for better readability */
+    font-size: 16px;
+    text-align: justify; /* Align text neatly */
+}
 
 /* Footer */
 footer {
