@@ -23,7 +23,7 @@ html, body{
 .blue-container {
     position: fixed;
     margin: 0; /* Removes all margins around the container */
-    padding: 15px; /* Uniform padding inside the container */
+    padding: 20px; /* Uniform padding inside the container */
     position: relative; /*Ensures it's positioned correctly */
     top: 0; /* Explicitly places it at the top */
     width: 100%; /* Ensures full-width coverage */
