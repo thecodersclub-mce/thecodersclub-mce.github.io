@@ -33,17 +33,6 @@ html, body {
     justify-content: space-between; /* Ensures logo and text are spaced properly */
 }
 
-/* Blue Container (Header) */
-.blue-container {
-    width: 100%; /* Ensures the container spans the full width */
-    background-color: #0056b3;
-    padding: 20px; /* Adds uniform spacing around the content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex; /* Flexbox for horizontal alignment */
-    align-items: center; /* Centers content vertically */
-    gap: 10px; /* Reduces gap between logo and text */
-    color: white;
-}
 
 /* Logo Styling */
 .favicon-logo {
