@@ -21,8 +21,9 @@ html, body{
 }
 
 .blue-container {
-    margin-top: 0; /* Removes all margins around the container */
-    padding: 20px; /* Uniform padding inside the container */
+    position: fixed;
+    margin: 0; /* Removes all margins around the container */
+    padding: 15px; /* Uniform padding inside the container */
     position: relative; /*Ensures it's positioned correctly */
     top: 0; /* Explicitly places it at the top */
     width: 100%; /* Ensures full-width coverage */
@@ -32,6 +33,7 @@ html, body{
     align-items: center; /* Centers content vertically */
     gap: 10px; /* Space between logo and titles */
     color: white; /* White text color */
+    z-index: 1000; /* Ensures the header stays above other elements */
 }
 
 /* Logo Styling */
@@ -168,16 +170,16 @@ form {
     align-items: center; /* Centers items horizontally */
     gap: 15px; /* Adds space between form elements */
 }
-
 /* Footer */
 footer {
     width: 100%; /* Spans the full width */
-    background-color: #00408f;
-    color: white;
-    text-align: center; /* Centers text */
-    padding: 20px; /* Adds padding around footer text */
-    font-size: 14px; /* Sets font size for footer */
+    background-color: #00408f; /* Footer background color */
+    color: white; /* Text color for footer */
+    text-align: center; /* Centers the text */
+    padding: 10px; /* Reduces height of the footer */
+    font-size: 14px; /* Footer font size */
     border-top: 3px solid #0056b3; /* Top border for footer */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-top: auto; /* Pushes footer to the bottom of the page */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0; /* Places the footer at the very bottom */
 }
