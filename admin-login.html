@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - The Coders Club</title>
-    <!-- Link to Stylesheet -->
+    <!-- Link to External Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Blue Container -->
+    <!-- Blue Container (Header) -->
     <div class="blue-container">
         <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
         <div class="titles">
@@ -23,20 +23,16 @@
         <a href="about.html">About Us</a>
         <a href="learning-paths.html">Learning Paths</a>
         <a href="leaderboard.html">Leaderboard</a>
-        <a href="login.html" class="active">Login</a>
+        <a href="admin-login.html" class="active">Admin Login</a>
     </nav>
 
-    <!-- Main Content -->
-    <section class="content">
+    <!-- Login Content -->
+    <section class="login-container">
         <h1>Admin Login</h1>
-        <form action="admin-dashboard.html" method="POST">
-            <label for="admin-email">Email:</label>
-            <input type="email" id="admin-email" name="email" required>
-            
-            <label for="admin-password">Password:</label>
-            <input type="password" id="admin-password" name="password" required>
-
-            <button type="submit" class="interactive-button">Login</button>
+        <form>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <button type="button" class="interactive-button">Login</button>
         </form>
     </section>
 
