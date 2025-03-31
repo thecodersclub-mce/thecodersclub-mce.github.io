@@ -136,6 +136,39 @@ table tr:nth-child(even) {
 table tr:hover {
     background-color: #f1f1f1; /* Highlights row on hover for interactivity */
 }
+/* Button Container */
+.button-container {
+    display: flex; /* Enables horizontal layout */
+    flex-wrap: wrap; /* Allows buttons to wrap if there's not enough space */
+    justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Centers buttons vertically */
+    gap: 15px; /* Adds space between buttons */
+    margin-top: 20px; /* Adds spacing above button container */
+}
+
+/* Individual Buttons */
+.button-container button {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 25px; /* Adds internal spacing within buttons */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Smooth, rounded corners */
+    font-size: 16px; /* Sets font size for readability */
+    cursor: pointer; /* Adds pointer cursor on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Buttons */
+.button-container button:hover {
+    background-color: #003a70; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarges button */
+}
+
+/* Active State for Buttons */
+.button-container button:active {
+    transform: scale(1); /* Resets scale when button is clicked */
+}
 
 /* Footer */
 footer {
