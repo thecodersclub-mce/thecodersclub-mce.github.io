@@ -1,27 +1,45 @@
 /* Global Styles */
 html, body {
-    margin: 0; /* Adds consistent margin around the body */
-    padding: 0;
-    height: auto;
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    height: 100%; /* Ensures the body fills the viewport */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #f4f4f4; /* Sets background color */
-    color: #333; /* Default text color */
+    background-color: #f4f4f4;
+    color: #333;
     box-sizing: border-box;
+}
+
+/* Invisible Container */
+.invisible-container {
+    width: 100%; /* Spans the full width */
+    height: auto; /* Adjusts height dynamically */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    background-color: transparent; /* Keeps it invisible */
 }
 
 /* Blue Container (Header) */
 .blue-container {
-    width: calc(100vw - 100px); /* Full width adjusted for margins */
+    width: 100%; /* Spans the full width, regardless of zoom */
     background-color: #0056b3;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Aligns items in a row */
-    align-items: center; /* Centers vertically */
-    gap: 20px;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Centers content vertically */
+    gap: 20px; /* Space between logo and text */
     color: white;
-    position: relative;
 }
 
+//* Favicon Logo Styling */
+.favicon-logo {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+}
+
+/* Title Styling */
 .college-name {
     font-size: 18px;
     font-weight: bold;
@@ -32,28 +50,20 @@ html, body {
 .site-title {
     font-size: 20px;
     margin: 0;
-    color: white;
-    white-space: nowrap; /* Prevents wrapping */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Favicon Logo Styling */
-.favicon-logo {
-    width: 60px;
-    height: auto;
-    object-fit: contain;
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 /* Secondary Menu */
 .secondary-menu {
-    width: calc(100vw - 100px); /* Full width adjusted for margins */
+    width: 100%; /* Spans the full width */
     background-color: #00408f;
-    padding: 10px 20px;
-    display: flex; /* Horizontal layout */
-    gap: 15px; /* Adds space between items */
-    font-size: 16px;
-    justify-content: flex-start; /* Left alignment */
-    align-items: center; /* Vertically aligned */
+    padding: 10px 20px; /* Adds spacing */
+    display: flex; /* Items aligned horizontally */
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center; /* Centers items vertically */
 }
 
 .secondary-menu a {
@@ -71,61 +81,17 @@ html, body {
 
 .secondary-menu .active {
     font-weight: bold;
-    text-decoration: underline; /* Highlights active link */
-}
-
-/* Home Content */
-.home-content {
-    padding: 20px;
-    margin: 0 auto; /* Centers content horizontally */
-    max-width: 900px; /* Restricts width for readability */
-    background-color: white;
-    border-radius: 8px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    line-height: 1.6;
-    font-size: 16px;
-    text-align: justify; /* Justifies text */
-}
-
-.home-content h1, .home-content h2 {
-    color: #0056b3;
-    margin-bottom: 15px;
-}
-
-.home-content h1 {
-    font-size: 26px;
-    text-align: center;
-}
-
-.home-content h2 {
-    font-size: 22px;
-}
-
-.home-content p {
-    margin-bottom: 15px;
-}
-
-.home-content ul {
-    margin: 15px 0;
-    padding-left: 20px;
-}
-
-.home-content ul li {
-    margin-bottom: 10px;
-    list-style: disc;
-}
-
-.home-content b {
-    color: #333;
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    width: calc(100vw - 100px); /* Full width adjusted for margins */
+    width: 100%; /* Spans the full width */
     background-color: #00408f;
     color: white;
     text-align: center;
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
 }
