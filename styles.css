@@ -182,5 +182,4 @@ footer {
     border-top: 3px solid #0056b3; /* Top border for footer */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
     position: fixed; /* Fixes the footer at the bottom */
-    bottom: 0; /* Places the footer at the very bottom */
 }
