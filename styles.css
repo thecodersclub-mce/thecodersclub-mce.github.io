@@ -33,36 +33,35 @@ html, body {
     justify-content: space-between; /* Ensures logo and text are spaced properly */
 }
 
-
 /* Logo Styling */
 .favicon-logo {
     width: 60px; /* Sets logo width */
     height: auto; /* Maintains aspect ratio */
-    object-fit: contain;
+    object-fit: contain; /* Prevents distortion */
 }
 
 /* Title Styling */
 .titles {
-    display: flex; /* Flexbox to align titles */
-    flex-direction: column; /* Stacks title items vertically */
-    margin-left: 10px; /* Ensures text is close to the logo but not touching */
+    display: flex; /* Flexbox alignment for titles */
+    flex-direction: column; /* Stacks text vertically */
+    justify-content: center; /* Centers text vertically */
+    margin: 0; /* Removes default margin */
+    gap: 2px; /* Minimal gap between the two lines of text */
 }
 
 .college-name {
     font-size: 18px;
     font-weight: bold;
+    margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-    margin: 0; /* Removes unwanted margins */
 }
 
-/* Site Title Styling */
 .site-title {
     font-size: 20px;
     margin: 0;
-    color: white;
-    white-space: nowrap; /* Prevent text wrapping */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    white-space: nowrap; /* Prevents wrapping */
+    color: white; /* Ensures consistent title color */
 /* Secondary Menu */
 .secondary-menu {
     width: 100%; /* Spans the full width */
