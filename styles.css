@@ -39,6 +39,7 @@ html, body {
     height: auto; /* Maintains aspect ratio */
     object-fit: contain; /* Prevents distortion */
 }
+
 /* Titles Styling */
 .titles {
     margin-left: 15px; /* Provides adequate spacing from the logo */
@@ -110,46 +111,31 @@ html, body {
     text-align: center; /* Center-aligns headings */
 }
 
-.content ul {
-    margin: 15px 0;
-    padding-left: 20px;
+/* Table Styling (Applicable to About & Leaderboard) */
+table {
+    width: 100%; /* Ensures the table spans container width */
+    margin: 20px 0; /* Adds spacing around table */
+    border-collapse: collapse; /* Removes gaps between borders */
+    text-align: center; /* Aligns text in table cells */
 }
 
-.content ul li {
-    margin-bottom: 10px;
-    list-style: disc; /* Bullet points */
-}
-/* Time-Table Styling */
-.time-table {
-    margin-top: 20px; /* Spacing from the previous section */
-    max-width: 1000px; /* Proper width for visibility */
-    padding: 20px; /* Adds spacing around the table */
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 8px; /* Smooth edges */
+table th, table td {
+    border: 1px solid #ddd; /* Light border for cells */
+    padding: 10px; /* Adds space inside cells */
 }
 
-.time-table h2 {
-    text-align: center;
-    color: #0056b3;
+table thead {
+    background-color: #0056b3; /* Sets header background color */
+    color: white; /* Sets header text color */
 }
 
-.time-table table {
-    width: 100%; /* Ensures table spans the container width */
-    border-collapse: collapse; /* Removes gaps between table borders */
-    text-align: center;
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row background for better readability */
 }
 
-.time-table th, .time-table td {
-    padding: 10px;
-    border: 1px solid #ddd; /* Adds light border */
+table tr:hover {
+    background-color: #f1f1f1; /* Highlights row on hover for interactivity */
 }
-
-.time-table thead {
-    background-color: #0056b3;
-    color: white; /* White text for header */
-}
-
 
 /* Footer */
 footer {
@@ -162,26 +148,4 @@ footer {
     border-top: 3px solid #0056b3; /* Top border for footer */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin-top: auto; /* Pushes footer to the bottom of the page */
-}
-
-/* Button Styling for Learning Paths */
-.button-container {
-    display: flex; /* Align buttons horizontally */
-    gap: 15px; /* Space between buttons */
-    justify-content: center; /* Centers buttons */
-    margin-top: 20px; /* Adds spacing above buttons */
-}
-
-.interactive-button {
-    text-decoration: none;
-    color: white;
-    background-color: #0056b3;
-    padding: 10px 20px; /* Padding for button size */
-    border-radius: 5px; /* Rounded corners */
-    font-weight: bold; /* Bold text for buttons */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-.interactive-button:hover {
-    background-color: #003a70; /* Darker shade on hover */
 }
