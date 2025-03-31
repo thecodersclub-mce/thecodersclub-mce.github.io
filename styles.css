@@ -17,7 +17,7 @@ html, body {
     flex-direction: column; /* Stacks items vertically */
     align-items: center; /* Centers horizontally */
     background-color: transparent; /* Keeps container invisible */
-    padding: 0 20px; /* Side padding for alignment */
+    padding: 20px; /* Side padding for alignment */
     box-sizing: border-box; /* Includes padding in width calculations */
 }
 
