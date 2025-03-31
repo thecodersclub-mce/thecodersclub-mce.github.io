@@ -6,41 +6,45 @@
     <title>Student Login - The Coders Club</title>
     <!-- Link Favicon -->
     <link rel="icon" href="MCE_tab.png" type="image/png">
-    <!-- Link to External Stylesheet -->
+    <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Blue Container -->
-    <div class="blue-container">
-        <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
-        <div class="titles">
-            <h1 class="college-name">Mangayarkarasi College of Engineering</h1>
-            <h2 class="site-title">The Coders Club</h2>
+    <!-- Invisible Container -->
+    <div class="invisible-container">
+        <!-- Blue Container (Header) -->
+        <div class="blue-container">
+            <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
+            <div class="titles">
+                <h1 class="college-name">Mangayarkarasi College of Engineering</h1>
+                <h2 class="site-title">The Coders Club</h2>
+            </div>
         </div>
+
+        <!-- Navigation Menu -->
+        <nav class="secondary-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="learning-paths.html">Learning Paths</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="login.html" class="active">Login</a>
+        </nav>
+
+        <!-- Main Content Section -->
+        <section class="content">
+            <h2>Student Login</h2>
+            <p>Welcome, students! Please enter your credentials to access your dashboard.</p>
+            <form>
+                <input type="text" placeholder="Username" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <button type="submit" class="interactive-button">Login</button>
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 The Coders Club. All rights reserved.</p>
+        </footer>
     </div>
-
-    <!-- Secondary Menu -->
-    <nav class="secondary-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="learning-paths.html">Learning Paths</a>
-        <a href="leaderboard.html">Leaderboard</a>
-        <a href="login.html" class="active">Login</a>
-    </nav>
-
-    <!-- Main Login Content -->
-    <section class="login-container">
-        <h1>Student Login</h1>
-        <form>
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <input type="password" name="password" placeholder="Enter your password" required>
-            <button type="button" class="interactive-button">Login</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>Created by The Coders Club</p>
-    </footer>
 </body>
 </html>
