@@ -1,25 +1,25 @@
 /* Global Styles */
 html, body {
-    margin:0; /* Adds margin around the entire body */
+    margin: 50px; /* Adds consistent margin around the body */
     padding: 0;
-    height: auto; /* Adjusts height dynamically based on content */
+    height: auto;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* Sets background color */
+    color: #333; /* Default text color */
     box-sizing: border-box;
 }
 
 /* Blue Container (Header) */
 .blue-container {
-    width: 100vw; /* Ensures full width */
+    width: calc(100vw - 100px); /* Full width adjusted for margins */
     background-color: #0056b3;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Centers content vertically */
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Centers vertically */
     gap: 20px;
     color: white;
-    position: relative; /* Ensures proper alignment */
+    position: relative;
 }
 
 .college-name {
@@ -33,7 +33,7 @@ html, body {
     font-size: 20px;
     margin: 0;
     color: white;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents wrapping */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -42,19 +42,18 @@ html, body {
     width: 60px;
     height: auto;
     object-fit: contain;
-    margin: 0;
 }
+
 /* Secondary Menu */
 .secondary-menu {
-    width: 100vw; /* Full width to fill the screen */
+    width: calc(100vw - 100px); /* Full width adjusted for margins */
     background-color: #00408f;
-    padding: 10px 20px; /* Adds padding for spacing */
-    display: flex; /* Flexbox layout for horizontal alignment */
-    flex-direction: row; /* Ensures items are aligned in a single line */
-    gap: 15px; /* Adds spacing between the menu links */
+    padding: 10px 20px;
+    display: flex; /* Horizontal layout */
+    gap: 15px; /* Adds space between items */
     font-size: 16px;
-    justify-content: flex-start; /* Aligns items to the left */
-    align-items: center; /* Centers items vertically within the container */
+    justify-content: flex-start; /* Left alignment */
+    align-items: center; /* Vertically aligned */
 }
 
 .secondary-menu a {
@@ -62,110 +61,71 @@ html, body {
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
+    font-weight: normal;
     transition: background-color 0.3s ease;
 }
 
 .secondary-menu a:hover {
-    background-color: #003a70;
+    background-color: #003a70; /* Hover effect */
 }
 
 .secondary-menu .active {
     font-weight: bold;
-    text-decoration: underline;
-}
-/* Home Body Contents */
-.page-content {
-    padding: 20px; /* Internal spacing inside the content box */
-    margin: 50px; /* Equal margin from all sides of the screen */
-    max-width: 900px; /* Restrict maximum width for readability */
-    background-color: white;
-    border-radius: 8px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
-    line-height: 1.6; /* Proper spacing between lines */
-    font-size: 16px;
-    text-align: justify; /* Align text for clean appearance */
+    text-decoration: underline; /* Highlights active link */
 }
 
-/.page-content h1,
-.page-content h2 {
+/* Home Content */
+.home-content {
+    padding: 20px;
+    margin: 0 auto; /* Centers content horizontally */
+    max-width: 900px; /* Restricts width for readability */
+    background-color: white;
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: justify; /* Justifies text */
+}
+
+.home-content h1, .home-content h2 {
     color: #0056b3;
     margin-bottom: 15px;
 }
 
-.page-content h1 {
+.home-content h1 {
     font-size: 26px;
     text-align: center;
 }
 
-.page-content h2 {
+.home-content h2 {
     font-size: 22px;
 }
 
-.page-content p {
+.home-content p {
     margin-bottom: 15px;
 }
 
-.page-content ul {
+.home-content ul {
     margin: 15px 0;
     padding-left: 20px;
 }
 
-.page-content ul li {
+.home-content ul li {
     margin-bottom: 10px;
     list-style: disc;
 }
 
-.page-content b {
+.home-content b {
     color: #333;
 }
 
 /* Footer */
 footer {
-    width: 100vw; /* Full width to fill the screen */
+    width: calc(100vw - 100px); /* Full width adjusted for margins */
     background-color: #00408f;
     color: white;
     text-align: center;
     padding: 20px;
     font-size: 14px;
     border-top: 3px solid #0056b3;
-    margin-top: auto; /* Automatically moves under content */
-}
-/* Login Container */
-.login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 40px auto; /* Shared margin */
-}
-/* Wrap the main body content in a container */
-.body-container {
-    padding: 20px; /* Space inside the container */
-    margin: 50px; /* Equal spacing from all sides of the screen */
-    background-color: white;
-    border-radius: 8px; /* Adds rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
-    max-width: 900px; /* Restrict the width for readability */
-    line-height: 1.6; /* Line spacing for better readability */
-    font-size: 16px;
-    text-align: justify; /* Align text neatly */
-}
-
-/* Footer */
-footer {
-    width: 100vw; /* Ensures full width */
-    background-color: #00408f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    border-top: 3px solid #0056b3;
-    margin-top: auto; /* Moves footer dynamically under content */
 }
