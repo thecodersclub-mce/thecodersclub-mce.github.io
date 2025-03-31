@@ -6,8 +6,6 @@
     <title>Student Login - The Coders Club</title>
     <!-- Link to Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Google reCAPTCHA Script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Blue Container -->
@@ -31,17 +29,14 @@
     <!-- Main Content -->
     <section class="content">
         <h1>Student Login</h1>
-        <form action="student-dashboard.html" method="POST">
+        <form id="login-form">
             <label for="student-email">Email:</label>
             <input type="email" id="student-email" name="email" required>
             
             <label for="student-password">Password:</label>
             <input type="password" id="student-password" name="password" required>
 
-            <!-- Add reCAPTCHA -->
-            <div class="g-recaptcha" data-sitekey="6LeneQUrAAAAACd3KaX1Y6xS07dg0GV1GYTjIUbW"></div>
-
-            <button type="submit" class="interactive-button">Login</button>
+            <button type="button" class="interactive-button" id="login-button">Login</button>
         </form>
     </section>
 
@@ -49,5 +44,44 @@
     <footer>
         <p>Created by The Coders Club</p>
     </footer>
+
+    <!-- Firebase Integration -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAemO6d4ZJ2OTN5ETt81W4SaO3gPwrwvek",
+            authDomain: "the-coders-club-mce.firebaseapp.com",
+            projectId: "the-coders-club-mce",
+            storageBucket: "the-coders-club-mce.firebasestorage.app",
+            messagingSenderId: "935065851716",
+            appId: "1:935065851716:web:6f940040e205fca5fca911",
+            measurementId: "G-WY6LMJFTMV"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        // Login function
+        const loginButton = document.getElementById('login-button');
+        loginButton.addEventListener('click', () => {
+            const email = document.getElementById('student-email').value;
+            const password = document.getElementById('student-password').value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    alert('Login successful!');
+                    // Redirect to the dashboard or another page
+                    window.location.href = 'student-dashboard.html';
+                })
+                .catch((error) => {
+                    alert('Login failed: ' + error.message);
+                });
+        });
+    </script>
 </body>
 </html>
