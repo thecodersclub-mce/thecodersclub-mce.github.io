@@ -8,34 +8,32 @@ html, body {
     color: #333;
     box-sizing: border-box;
 }
-
 /* Blue Container (Header) */
 .blue-container {
     width: 100%;
     background-color: #0056b3;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap; /* Ensures elements wrap properly */
-    align-items: center;
-    justify-content: space-between; /* Aligns items correctly */
-    gap: 20px;
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Align items vertically centered */
+    gap: 15px; /* Space between logo and text */
     color: white;
+}
+
+.college-name,
+.site-title {
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .college-name {
     font-size: 18px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    margin: 0;
+    margin-bottom: 5px; /* Adds space between college name and club name */
 }
 
 .site-title {
-    font-size: 20px;
-    margin: 0;
-    color: white;
-    white-space: nowrap; /* Prevent text wrapping */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
 }
 
 /* Favicon Logo Styling */
