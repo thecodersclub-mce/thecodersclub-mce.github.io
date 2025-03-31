@@ -20,39 +20,43 @@ html, body {
     padding: 0 20px; /* Adds side padding for better alignment */
     box-sizing: border-box; /* Includes padding in size calculations */
 }
-
 /* Blue Container (Header) */
 .blue-container {
-    width: 100%; /* Spans the full width */
+    width: 100%; /* Ensures the container spans the full width */
     background-color: #0056b3;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Horizontal layout for logo and titles */
-    align-items: center; /* Centers content vertically */
-    gap: 20px; /* Space between logo and text */
+    padding: 20px 40px; /* Adds padding around the content for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Centers the content vertically */
+    gap: 20px; /* Adds space between the logo and text */
     color: white;
+    justify-content: space-between; /* Ensures logo and text are spaced properly */
 }
 
 /* Logo Styling */
 .favicon-logo {
-    width: 60px;
-    height: auto;
-    object-fit: contain;
+    width: 60px; /* Sets logo width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Prevents distortion */
+    margin-right: 20px; /* Adds spacing on the right of the logo */
 }
 
 /* Title Styling */
+.college-name, .site-title {
+    text-align: left; /* Aligns text to the left */
+    margin: 0; /* Removes default margins */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
 .college-name {
     font-size: 18px;
     font-weight: bold;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds subtle text shadow */
 }
 
 .site-title {
     font-size: 20px;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    white-space: nowrap; /* Prevent wrapping */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds subtle text shadow */
 }
 
 /* Secondary Menu */
