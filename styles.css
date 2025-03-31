@@ -73,20 +73,20 @@ html, body {
     font-weight: bold;
     text-decoration: underline;
 }
-/* Shared Content Margin */
+/* Home Body Contents */
 .page-content {
-    padding: 20px;
-    margin: 40px auto; /* Surrounding margin for all content */
-    max-width: 900px;
+    padding: 20px; /* Internal spacing inside the content box */
+    margin: 50px; /* Equal margin from all sides of the screen */
+    max-width: 900px; /* Restrict maximum width for readability */
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Allows content to grow */
-    line-height: 1.6;
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    line-height: 1.6; /* Proper spacing between lines */
     font-size: 16px;
+    text-align: justify; /* Align text for clean appearance */
 }
 
-/.page-content h1, 
+/.page-content h1,
 .page-content h2 {
     color: #0056b3;
     margin-bottom: 15px;
@@ -103,7 +103,6 @@ html, body {
 
 .page-content p {
     margin-bottom: 15px;
-    line-height: 1.8;
 }
 
 .page-content ul {
@@ -120,6 +119,17 @@ html, body {
     color: #333;
 }
 
+/* Footer */
+footer {
+    width: 100vw; /* Full width to fill the screen */
+    background-color: #00408f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 3px solid #0056b3;
+    margin-top: auto; /* Automatically moves under content */
+}
 /* Login Container */
 .login-container {
     display: flex;
