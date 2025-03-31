@@ -39,29 +39,27 @@ html, body {
     height: auto; /* Maintains aspect ratio */
     object-fit: contain; /* Prevents distortion */
 }
-
-/* Title Styling */
+/* Titles Styling */
 .titles {
-    display: flex; /* Flexbox for text alignment */
-    flex-direction: column; /* Stacks text vertically */
-    justify-content: center; /* Vertically aligns text */
-    margin: 0; /* Removes default margin */
-    gap: 2px; /* Minimal gap between text lines */
+    margin-left: 15px; /* Provides adequate spacing from the logo */
+    display: flex;
+    flex-direction: column; /* Stacks the text vertically */
+    color: white;
 }
 
 .college-name {
     font-size: 18px;
     font-weight: bold;
-    margin: 0; /* Removes unwanted margins */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds subtle shadow */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for text */
 }
 
 .site-title {
     font-size: 20px;
-    margin: 0; /* Removes unwanted margins */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds subtle shadow */
-    white-space: nowrap; /* Prevents wrapping */
-    color: white; /* Ensures consistent title color */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
+    white-space: nowrap; /* Prevents line breaking */
+    font-weight: bold;
 }
 
 /* Secondary Menu */
