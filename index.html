@@ -8,63 +8,78 @@
     <link rel="icon" href="MCE_tab.png" type="image/png">
     <!-- Link to External Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Invisible Container Inline CSS -->
+    <style>
+        /* Invisible Container for Body Contents */
+        .invisible-container {
+            width: 100%; /* Spans the entire page width */
+            height: auto; /* Dynamic height based on content */
+            display: flex; /* Enables flexible layout */
+            flex-direction: column; /* Stacks items vertically */
+            align-items: center; /* Centers content horizontally */
+            background-color: transparent; /* Keeps container invisible */
+        }
+    </style>
 </head>
 <body>
-    <!-- Blue Container -->
-    <div class="blue-container">
-        <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
-        <div>
-            <h1 class="college-name">Mangayarkarasi College of Engineering</h1>
-            <h2 class="site-title">The Coders Club</h2>
+    <!-- Invisible Container -->
+    <div class="invisible-container">
+        <!-- Blue Container (Header) -->
+        <div class="blue-container">
+            <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
+            <div>
+                <h1 class="college-name">Mangayarkarasi College of Engineering</h1>
+                <h2 class="site-title">The Coders Club</h2>
+            </div>
         </div>
+
+        <!-- Secondary Menu -->
+        <nav class="secondary-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="learning-paths.html">Learning Paths</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+        <!-- Main Content Section -->
+        <section class="home-content">
+            <h1>Welcome to The Coders Club</h1>
+            <p>
+                Founded with a vision to inspire, innovate, and empower, The Coders Club is the heartbeat of Mangayarkarasi College of Engineering's tech-savvy community. It is a vibrant space where students from diverse backgrounds come together to share ideas, learn new skills, and tackle real-world challenges. With a focus on collaboration and creativity, the club helps students build essential coding skills, develop teamwork, and discover their passion for technology.
+            </p>
+            <h2>Our Vision and Mission</h2>
+            <p>
+                At The Coders Club, we envision a future where every student has the tools and resources to excel in the ever-evolving world of technology. Our mission is to foster an inclusive environment where innovation thrives, ideas flourish, and knowledge is shared freely among members. Whether you're a beginner starting your coding journey or an advanced programmer looking to mentor others, The Coders Club is your launchpad to success.
+            </p>
+            <h2>About Mangayarkarasi College of Engineering</h2>
+            <p>
+                Established with a commitment to excellence, Mangayarkarasi College of Engineering (MCE) is a premier institution dedicated to nurturing the next generation of engineers and technologists. Located in the heart of Tamil Nadu, our college boasts state-of-the-art facilities, a rigorous academic curriculum, and a vibrant campus culture. At MCE, we believe in cultivating both technical prowess and soft skills, ensuring our students are well-rounded professionals.
+            </p>
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Workshops and Bootcamps: Get hands-on experience with coding languages, frameworks, and tools through expertly curated sessions.</li>
+                <li>Hackathons: Test your skills in competitive coding environments and collaborate with peers to build innovative solutions.</li>
+                <li>Guest Lectures: Learn from industry leaders and gain insights into emerging trends in technology.</li>
+                <li>Networking: Connect with like-minded students, alumni, and professionals to expand your horizons.</li>
+                <li>Career Support: Receive guidance on internships, job opportunities, and resume building from experienced mentors.</li>
+            </ul>
+            <h2>Success Stories</h2>
+            <p>
+                Our members have gone on to achieve remarkable success in various fields, including software development, data science, and entrepreneurship. By leveraging the skills and connections gained at The Coders Club, they've secured internships at leading tech companies, developed innovative startups, and contributed to cutting-edge research.
+            </p>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>AI Bootcamp: A two-day intensive workshop on artificial intelligence and machine learning.</li>
+                <li>Annual Coding Fest: Showcase your skills in front of recruiters and industry leaders.</li>
+                <li>Tech Talks: Engage with experts on topics like cybersecurity, blockchain, and more.</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Created by The Coders Club</p>
+        </footer>
     </div>
-
-    <!-- Secondary Menu -->
-    <nav class="secondary-menu">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="learning-paths.html">Learning Paths</a>
-        <a href="leaderboard.html">Leaderboard</a>
-        <a href="login.html">Login</a>
-    </nav>
-
-    <!-- Main Content Section -->
-    <section class="home-content">
-        <h1>Welcome to The Coders Club</h1>
-        <p>
-            Founded with a vision to inspire, innovate, and empower, The Coders Club is the heartbeat of Mangayarkarasi College of Engineering's tech-savvy community. It is a vibrant space where students from diverse backgrounds come together to share ideas, learn new skills, and tackle real-world challenges. With a focus on collaboration and creativity, the club helps students build essential coding skills, develop teamwork, and discover their passion for technology.
-        </p>
-        <h2>Our Vision and Mission</h2>
-        <p>
-            At The Coders Club, we envision a future where every student has the tools and resources to excel in the ever-evolving world of technology. Our mission is to foster an inclusive environment where innovation thrives, ideas flourish, and knowledge is shared freely among members. Whether you're a beginner starting your coding journey or an advanced programmer looking to mentor others, The Coders Club is your launchpad to success.
-        </p>
-        <h2>About Mangayarkarasi College of Engineering</h2>
-        <p>
-            Established with a commitment to excellence, Mangayarkarasi College of Engineering (MCE) is a premier institution dedicated to nurturing the next generation of engineers and technologists. Located in the heart of Tamil Nadu, our college boasts state-of-the-art facilities, a rigorous academic curriculum, and a vibrant campus culture. At MCE, we believe in cultivating both technical prowess and soft skills, ensuring our students are well-rounded professionals.
-        </p>
-        <p>
-            The Coders Club is an integral part of MCE's mission to bridge the gap between academic learning and real-world applications. By providing a platform for coding enthusiasts, the club plays a vital role in shaping the innovators and leaders of tomorrow.
-        </p>
-        <h2>What We Offer</h2>
-        <ul>
-            <li>Workshops and Bootcamps: Get hands-on experience with coding languages, frameworks, and tools through expertly curated sessions.</li>
-            <li>Hackathons: Test your skills in competitive coding environments and collaborate with peers to build innovative solutions.</li>
-            <li>Guest Lectures: Learn from industry leaders and gain insights into emerging trends in technology.</li>
-            <li>Networking: Connect with like-minded students, alumni, and professionals to expand your horizons.</li>
-            <li>Career Support: Receive guidance on internships, job opportunities, and resume building from experienced mentors.</li>
-        </ul>
-        <h2>Success Stories</h2>
-        <p>
-            Our members have gone on to achieve remarkable success in various fields, including software development, data science, and entrepreneurship. By leveraging the skills and connections gained at The Coders Club, they've secured internships at leading tech companies, developed innovative startups, and contributed to cutting-edge research.
-        </p>
-        <p>
-            If you're looking for a community that pushes you to reach your potential and celebrates your victories, The Coders Club is the place to be.
-        </p>
-        <h2>Upcoming Events</h2>
-        <p>
-            Stay tuned for our exciting lineup of events! Here’s what’s on the horizon:
-        </p>
-        <ul>
-            <li>AI Bootcamp: A two-day intensive workshop on artificial intelligence and machine learning.</li>
-            <li>Annual Coding Fest: Showcase your skills in front of recruiters and industry leaders.</li>
-            <li>Tech Talks:
+</body>
+</html>
