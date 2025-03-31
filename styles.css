@@ -54,6 +54,18 @@ html, body {
     font-size: 16px;
     justify-content: flex-start; /* Aligns all items to the left */
 }
+/* Secondary Menu */
+.secondary-menu {
+    width: 100vw; /* Full width to fill the screen */
+    background-color: #00408f;
+    padding: 10px 20px; /* Adds padding for spacing */
+    display: flex; /* Flexbox layout for horizontal alignment */
+    flex-direction: row; /* Ensures items are aligned in a single line */
+    gap: 15px; /* Adds spacing between the menu links */
+    font-size: 16px;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center; /* Centers items vertically within the container */
+}
 
 .secondary-menu a {
     text-decoration: none;
@@ -69,8 +81,8 @@ html, body {
 
 .secondary-menu .active {
     font-weight: bold;
-    
-
+    text-decoration: underline;
+}
 /* Shared Content Margin */
 .page-content {
     padding: 20px;
