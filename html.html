@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Path</title>
+    <!-- Link Favicon -->
+    <link rel="icon" href="MCE_tab.png" type="image/png">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Invisible Container -->
+    <div class="invisible-container">
+        <!-- Blue Container (Header) -->
+        <div class="blue-container">
+            <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
+            <div class="titles">
+                <h1 class="college-name">Mangayarkarasi College of Engineering</h1>
+                <h2 class="site-title">The Coders Club</h2>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="secondary-menu">
+            <a href="index.html">Home</a>
+            <a href="learning-paths.html">Learning Paths</a>
+            <a href="java.html">Java</a>
+            <a href="python.html">Python</a>
+            <a href="html.html" class="active">HTML</a>
+        </nav>
+
+        <!-- Main Content Section -->
+        <section class="content">
+            <h2>HTML Learning Path</h2>
+            <p>Embark on your journey to master HTML programming. Below, you'll find a curated set of module videos designed to enhance your skills and understanding of HTML concepts:</p>
+            <!-- Video Player -->
+            <iframe id="videoPlayer" src="https://www.youtube.com/embed/qz0aGYrrlhU" allowfullscreen></iframe>
+            <!-- Navigation Buttons -->
+            <div class="button-container">
+                <button onclick="previousVideo()" class="interactive-button">◀ Previous</button>
+                <button onclick="nextVideo()" class="interactive-button">Next ▶</button>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 The Coders Club. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Video Navigation -->
+    <script>
+        const videos = [
+            "qz0aGYrrlhU", // Video 1: HTML Basics
+            "kUMe1FH4CHE", // Video 2: HTML Forms
+            "mJgBOIoGihA", // Video 3: HTML Tables
+            "G3e-cpL7ofc"  // Video 4: Advanced HTML Concepts
+        ];
+        let currentIndex = 0;
+
+        function previousVideo() {
+            if (currentIndex > 0) {
+                currentIndex -= 1;
+                document.getElementById("videoPlayer").src = `https://www.youtube.com/embed/${videos[currentIndex]}`;
+            } else {
+                alert("You are already at the first video!");
+            }
+        }
+
+        function nextVideo() {
+            if (currentIndex < videos.length - 1) {
+                currentIndex += 1;
+                document.getElementById("videoPlayer").src = `https://www.youtube.com/embed/${videos[currentIndex]}`;
+            } else {
+                alert("You are already at the last video!");
+            }
+        }
+    </script>
+</body>
+</html>
