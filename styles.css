@@ -66,14 +66,14 @@ html, body {
     margin: 0; /* Removes unwanted margins */
 }
 
+/* Site Title Styling */
 .site-title {
     font-size: 20px;
-    margin: 0; /* Removes unwanted margins */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    white-space: nowrap; /* Prevents text wrapping */
-    color: white; /* Ensures consistent title color */
+    margin: 0;
+    color: white;
+    white-space: nowrap; /* Prevent text wrapping */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
 /* Secondary Menu */
 .secondary-menu {
     width: 100%; /* Spans the full width */
