@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - The Coders Club</title>
-    <!-- Link Favicon -->
     <link rel="icon" href="MCE_tab.png" type="image/png">
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the Container and Content */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Styling for Buttons */
+        .interactive-button {
+            background-color: #0056b3;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .interactive-button:hover {
+            background-color: #003a70;
+            transform: scale(1.05);
+        }
+
+        .interactive-button:active {
+            transform: scale(1);
+        }
+    </style>
 </head>
 <body>
     <!-- Invisible Container -->
