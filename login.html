@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard - The Coders Club</title>
+    <title>Login - The Coders Club</title>
     <!-- Link Favicon -->
     <link rel="icon" href="MCE_tab.png" type="image/png">
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Styling for the Button Container */
-        .button-container {
+        .login-buttons-container {
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -18,7 +17,7 @@
         }
 
         /* Styling for Buttons */
-        .interactive-button {
+        .inline-login-button {
             background-color: #0056b3; /* Blue button color */
             color: white; /* Text color */
             padding: 12px 25px; /* Internal spacing */
@@ -30,18 +29,18 @@
             transition: background-color 0.3s ease, transform 0.2s ease; /* Hover effect */
         }
 
-        .interactive-button:hover {
+        .inline-login-button:hover {
             background-color: #003a70; /* Darker blue shade on hover */
             transform: scale(1.05); /* Slightly enlarges button */
         }
 
-        .interactive-button:active {
+        .inline-login-button:active {
             transform: scale(1); /* Resets scale when clicked */
         }
     </style>
 </head>
 <body>
-   <!-- Invisible Container -->
+    <!-- Invisible Container -->
     <div class="invisible-container">
         <!-- Blue Container (Header) -->
         <div class="blue-container">
@@ -57,17 +56,18 @@
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="learning-paths.html">Learning Paths</a>
-            <a href="leaderboard.html" class="active">Leaderboard</a>
-            <a href="login.html">Login</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="login.html" class="active">Login</a>
         </nav>
+
         <!-- Main Content Section -->
         <section class="content">
             <h2>Login</h2>
             <p>Select your login type below to proceed to your dashboard:</p>
-            <div class="button-container">
-                <button onclick="location.href='student-login.html'" class="interactive-button">Student Login</button>
-                <button onclick="location.href='staff-login.html'" class="interactive-button">Staff Login</button>
-                <button onclick="location.href='admin-login.html'" class="interactive-button">Admin Login</button>
+            <div class="login-buttons-container">
+                <button onclick="location.href='student-login.html'" class="inline-login-button">Student Login</button>
+                <button onclick="location.href='staff-login.html'" class="inline-login-button">Staff Login</button>
+                <button onclick="location.href='admin-login.html'" class="inline-login-button">Admin Login</button>
             </div>
         </section>
 
