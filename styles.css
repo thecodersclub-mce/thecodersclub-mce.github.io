@@ -8,37 +8,38 @@ html, body {
     color: #333;
     box-sizing: border-box;
 }
+
 /* Blue Container (Header) */
 .blue-container {
-    width: 100%;
+    width: 100vw; /* Ensures full width */
     background-color: #0056b3;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Flexbox for horizontal layout */
-    align-items: center; /* Align items vertically centered */
-    gap: 15px; /* Space between logo and text */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Centers content vertically */
+    gap: 20px;
     color: white;
-}
-
-.college-name,
-.site-title {
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative; /* Ensures proper alignment */
 }
 
 .college-name {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px; /* Adds space between college name and club name */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .site-title {
-    font-size: 16px;
+    font-size: 20px;
+    margin: 0;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Favicon Logo Styling */
 .favicon-logo {
-    width: 40px;
+    width: 60px;
     height: auto;
     object-fit: contain;
     margin: 0;
@@ -46,12 +47,14 @@ html, body {
 
 /* Secondary Menu */
 .secondary-menu {
+    width: 100vw; /* Ensures full width */
     background-color: #00408f;
     padding: 10px;
-    display: flex; /* Restores horizontal layout */
+    display: flex; /* Horizontal layout */
     justify-content: center;
     gap: 10px;
     font-size: 16px;
+    position: relative; /* Ensures proper alignment */
 }
 
 .secondary-menu a {
@@ -136,6 +139,7 @@ html, body {
 
 /* Footer */
 footer {
+    width: 100vw; /* Ensures full width */
     background-color: #00408f;
     color: white;
     text-align: center;
