@@ -4,87 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Login - The Coders Club</title>
-    <!-- Link to Stylesheet -->
+    <!-- Link to External Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Styling for the container */
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 400px;
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        /* Styling for text fields */
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            transition: border-color 0.3s ease;
-        }
-
-        input[type="email"]:focus,
-        input[type="password"]:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-
-        /* Styling for button */
-        .interactive-button {
-            width: 100%;
-            padding: 12px 15px;
-            font-size: 16px;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .interactive-button:hover {
-            background-color: #0056b3;
-        }
-
-        .interactive-button:active {
-            background-color: #003f85;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .content {
-                padding: 15px;
-            }
-
-            input[type="email"],
-            input[type="password"] {
-                font-size: 14px;
-            }
-
-            .interactive-button {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Blue Container -->
+    <!-- Blue Container (Header) -->
     <div class="blue-container">
         <img src="MCE_tab.png" alt="Logo" class="favicon-logo">
         <div class="titles">
@@ -99,19 +23,15 @@
         <a href="about.html">About Us</a>
         <a href="learning-paths.html">Learning Paths</a>
         <a href="leaderboard.html">Leaderboard</a>
-        <a href="login.html" class="active">Login</a>
+        <a href="student-login.html" class="active">Student Login</a>
     </nav>
 
-    <!-- Main Content -->
-    <section class="content">
+    <!-- Login Content -->
+    <section class="login-container">
         <h1>Student Login</h1>
-        <form id="login-form">
-            <label for="student-email">Email:</label>
-            <input type="email" id="student-email" name="email" placeholder="Enter your email" required>
-            
-            <label for="student-password">Password:</label>
-            <input type="password" id="student-password" name="password" placeholder="Enter your password" required>
-
+        <form>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
             <button type="button" class="interactive-button">Login</button>
         </form>
     </section>
